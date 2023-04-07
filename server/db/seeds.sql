@@ -42,22 +42,23 @@ INSERT INTO developer (name, externalPage)
 VALUES ('Valve', 'https://store.steampowered.com/developer/valve?snr=1_5_9__2000');
 
 INSERT INTO tags (name, game_id)
-VALUES ('FPS, Sci-Fi, 1990s Multiplayer, Classic, Gore');
+VALUES ('FPS, Sci-Fi, 1990s Multiplayer, Classic, Gore', '1');
 
 INSERT INTO mods (game_id, name)
-VALUES ('Half-Life: MMod');
+VALUES ('1', 'Half-Life: MMod');
 
 INSERT INTO mods (game_id, name)
-VALUES ('Half-Life: Restored');
+VALUES ('1', 'Half-Life: Restored');
 
 INSERT INTO mods (game_id, name)
-VALUES ('Digital Paintball Redux'); 
+VALUES ('1', 'Digital Paintball Redux'); 
 
 INSERT INTO bundle (game_id, name, price, discountPercent, itemCount)
-VALUES ('VALVE COMPLETE PACK', '65.70', '55', '22')
+VALUES ('1', 'VALVE COMPLETE PACK', '65.70', '55', '22')
 
 INSERT INTO bundle (game_id, name, price, discountPercent, itemCount)
-VALUES ('HALF-LIFE COMPLETE', '36.52', '40','8');
+VALUES ('1', 'HALF-LIFE COMPLETE', '36.52', '40','8');
 
 INSERT INTO bundle (game_id, name, price, discountPercent, itemCount)
-VALUES ('Buy Half-Life 1 Anthology BUNDLE', '13.71', '45', '4');
+VALUES ('1', 'Buy Half-Life 1 Anthology BUNDLE', '13.71', '45', '4');
+
