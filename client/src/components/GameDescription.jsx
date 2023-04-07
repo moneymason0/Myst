@@ -15,6 +15,7 @@ function GameDescription(){
                 Also includes an exciting multiplayer mode that allows you to play against friends and enemies
                 
             </div>
+            <br></br>
             <div className="reviewSum">
                 <div className="reviewText">Recent Reviews:</div> <span className="reviewSpan">Overwelmingly Possive</span>
             </div>
@@ -31,6 +32,7 @@ function GameDescription(){
             <div className="devRow">
                 <div className="devRowText">Publisher:</div><a className="devRowLink"href="https://store.steampowered.com/developer/valve">Valve</a>
             </div>
+            <br></br>
             <div className="tagIntro">
                 Popular user-defined tags for this product:
             </div>

@@ -1,29 +1,30 @@
 import React, {useState, useEffect} from "react";
+import "/src/styles/GameDescription.css"
 
 function UserDefinedTags(){
     return(
         <div>
-            <button>
+            <a className="tag" href="https://store.steampowered.com/tags/en/FPS/">
                 FPS
-            </button>
-            <button>
-                Sci-Fi
-            </button>
-            <button>
+            </a>
+            <a className="tag" href="https://store.steampowered.com/tags/en/Sci-fi/">
+                Sci-fi
+            </a>
+            <a className="tag" href="https://store.steampowered.com/tags/en/1990%27s/">
                 1990's
-            </button>
-            <button>
+            </a>
+            <a className="tag" href="https://store.steampowered.com/tags/en/Multiplayer/">
                 Multiplayer
-            </button>
-            <button>
+            </a>
+            <a className="tag" href="https://store.steampowered.com/tags/en/Classic/">
                 Classic
-            </button>
-            <button>
+            </a>
+            <a className="tag" href="https://store.steampowered.com/tags/en/Gore/">
                 Gore
-            </button>
-            <button>
+            </a>
+            <div className="tagBtn">
                 +
-            </button>
+            </div>
         </div>
     )
 }
