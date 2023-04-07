@@ -1,7 +1,7 @@
 CREATE TABLE "reviews"(
     "id" INTEGER NOT NULL,
     "user_id" INTEGER NOT NULL,
-    "recomended" BOOLEAN NOT NULL,
+    "recommended" BOOLEAN NOT NULL,
     "review" VARCHAR(500) NOT NULL,
     "game_id" INTEGER NOT NULL,
     "helpfulCount" INTEGER NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE "Game"(
     "mainGenre" VARCHAR(50) NOT NULL,
     "gameWebsite" VARCHAR(150) NOT NULL,
     "metaCriticScore" INTEGER NOT NULL,
-    "discountPrecent" INTEGER NOT NULL,
+    "discountPercent" INTEGER NOT NULL,
     "aboutThisGame" VARCHAR(500) NOT NULL
 );
 ALTER TABLE
@@ -92,7 +92,7 @@ CREATE TABLE "bundle"(
     "game_id" INTEGER NOT NULL,
     "name" VARCHAR(150) NOT NULL,
     "price" INTEGER NOT NULL,
-    "discountPrecent" INTEGER NOT NULL,
+    "discountPercent" INTEGER NOT NULL,
     "itemCount" INTEGER NOT NULL
 );
 ALTER TABLE
