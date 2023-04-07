@@ -45,7 +45,7 @@ setIsHovering(false)
 
   return (
     <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <button type="submit" > {text}</button>
+      <a type="submit" > {text}</a>
       {showDropdown && isHovering && <ButtonDropDowns />}
     </div>
   );
