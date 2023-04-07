@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from "react";
+import pic from '/src/assets/game-description-image.png';
 
 function GameDescription(){
     return(
-        <h1> hello </h1>
+        <img src={pic}/>
     )
 }
 
