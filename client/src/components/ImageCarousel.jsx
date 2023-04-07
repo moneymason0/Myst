@@ -1,11 +1,12 @@
 import React, { useRef, useEffect, useCallback } from 'react';
 import Slider from 'react-slick';
 import { Container, Button } from 'react-bootstrap';
+import '../styles/ImageCarousel.css'
 
 function ImageCarousel({ images }) {
 
     const sliderRef = useRef(null);
-
+    // Slick image carousel settings
     const settings = {
         dots: false,
         infinite: true,
@@ -18,11 +19,11 @@ function ImageCarousel({ images }) {
         nextArrow: <div></div>,
         prevArrow: <div></div>
     };
-
+    // Clicking the left arrow, sets the current image to the previous image
     const handlePrev = useCallback(() => {
         sliderRef.current.slickPrev();
     }, []);
-
+    // Clicking the right arrow, sets the current image to the next image
     const handleNext = useCallback(() => {
         sliderRef.current.slickNext();
     }, []);
@@ -40,7 +41,7 @@ function ImageCarousel({ images }) {
                 <Button className="arrow-btn" onClick={handlePrev}>
                     &lt;
                 </Button>
-                <Button className="arrow-btn" onClick={handlePrev}>
+                <Button className="arrow-btn" onClick={handleNext}>
                     &gt;
                 </Button>
             </div>
