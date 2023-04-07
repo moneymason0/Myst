@@ -34,10 +34,15 @@ function ImageCarousel({ images }) {
                     <div key={index}>
                         <img src={src} alt={`Carousel item ${index = 1}`} className="img-fluid" />
                     </div>
-            ))}
+                ))}
             </Slider>
             <div className="arrows">
-                    
+                <Button className="arrow-btn" onClick={handlePrev}>
+                    &lt;
+                </Button>
+                <Button className="arrow-btn" onClick={handlePrev}>
+                    &gt;
+                </Button>
             </div>
         </Container>
     );
