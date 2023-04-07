@@ -27,7 +27,7 @@ CREATE TABLE "capabilities"(
 ALTER TABLE
     "capabilities" ADD PRIMARY KEY("id");
 CREATE TABLE "languages"(
-    "id" BIGINT NOT NULL,
+    "id" INTEGER NOT NULL,
     "name" VARCHAR(100) NOT NULL
 );
 ALTER TABLE
@@ -40,14 +40,14 @@ CREATE TABLE "Game"(
     "release" VARCHAR(100) NOT NULL,
     "developer_id" INTEGER NOT NULL,
     "publisher_id" INTEGER NOT NULL,
-    "language_id" BIGINT NOT NULL,
+    "language_id" INTEGER NOT NULL,
     "deckCompatable" BOOLEAN NOT NULL,
     "capabilities_id" INTEGER NOT NULL,
     "mainGenre" VARCHAR(50) NOT NULL,
     "gameWebsite" VARCHAR(150) NOT NULL,
     "metaCriticScore" INTEGER NOT NULL,
     "discountPrecent" INTEGER NOT NULL,
-    "aboutThisGame" VARCHAR(255) NOT NULL
+    "aboutThisGame" VARCHAR(500) NOT NULL
 );
 ALTER TABLE
     "Game" ADD PRIMARY KEY("id");
@@ -76,7 +76,7 @@ ALTER TABLE
 CREATE TABLE "tags"(
     "id" INTEGER NOT NULL,
     "name" VARCHAR(50) NOT NULL,
-    "game_id" BIGINT NOT NULL
+    "game_id" INTEGER NOT NULL
 );
 ALTER TABLE
     "tags" ADD PRIMARY KEY("id");
