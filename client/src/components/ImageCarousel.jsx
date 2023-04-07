@@ -1,12 +1,10 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useCallback } from 'react';
 import Slider from 'react-slick';
-import { Container } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 
-function ImageCarousel ({ images }) {
+function ImageCarousel({ images }) {
 
-    const sliderRef = React.useRef(null);
-
-    // const [currentImage, setCurrentImage] = useState('');
+    const sliderRef = useRef(null);
 
     const settings = {
         dots: false,
@@ -21,8 +19,27 @@ function ImageCarousel ({ images }) {
         prevArrow: <div></div>
     };
 
+    const handlePrev = useCallback(() => {
+        sliderRef.current.slickPrev();
+    }, []);
+
+    const handleNext = useCallback(() => {
+        sliderRef.current.slickNext();
+    }, []);
+
     return (
-        <div>Hello, again</div>
+        <Container>
+            <Slider ref={sliderRef} {...settings}>
+                {images.map((src, index) => (
+                    <div key={index}>
+                        <img src={src} alt={`Carousel item ${index = 1}`} className="img-fluid" />
+                    </div>
+            ))}
+            </Slider>
+            <div className="arrows">
+                    
+            </div>
+        </Container>
     );
 }
 

@@ -9,14 +9,13 @@ const images = [
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002351.116x65.jpg?t=1666824272',
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002350.116x65.jpg?t=1666824272'
 
-]
+];
 
 function App() {
 
-
   return (
     <div >
-      <ImageCarousel />
+      <ImageCarousel images={images}/>
       <GameDescription />
     </div>
   )
