@@ -123,11 +123,3 @@
     text-overflow: ellipsis;
     overflow: hidden;
 }
-.modal{
-    position: absolute;
-    z-index: 1000;
-    max-width: 1197px;
-    left: 229px;
-    top: 121px;
-    background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
-}
