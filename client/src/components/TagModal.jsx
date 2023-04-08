@@ -1,23 +1,32 @@
 import React,{useEffect, useState} from "react";
-import "/src/styles/GameDescription.css"
+import "/src/styles/GameDescriptionModal.css"
 
 function TagModal({onClose}){
 
     return(
         <div className="modal">
-            <div className="modalTopBar">
-                <div className="modalTopText">
-                    VIEW AND EDIT TAGS FOR THIS PRODUCT
+            <div className="modalTopBar"></div>
+            <div className="modalHeaderBoarder">
+                <div className="modalHeader">
+                    <div onClick={onClose} className="modalCloseHead"></div>
+                    <div className="modalTopText">
+                        VIEW AND EDIT TAGS FOR THIS PRODUCT
+                    </div>                      
                 </div>
-                <div onClick={onClose} className="modalCloseHead">X</div>
+              
             </div>
+
+
+            
             <div className="modalContent">
-                <div>
-                    <div className="modalDisplay">
+                <div className="modalDisplay">
+                    <div >
                         <div className="modalTagContent">
+                        <div className="modalSubTagContent">
+                      
                             <div className="modalTagSeperator"></div>
                             <div className="modalTagLeft">
-                                <h2>Popular user-defined tags for this product:<span className="modalToolTip">?</span></h2>
+                                <h2 className="modalLeftH2">Popular user-defined tags for this product:<span className="modalToolTip">(?)</span></h2>
                                 <div className="modalTagList">
                                     <div className="modalTag" >
                                         <a className="modalTagHref" href="https://store.steampowered.com/tags/en/FPS/">FPS</a>
@@ -82,23 +91,25 @@ function TagModal({onClose}){
                                 </div>
                             </div>
                             <div className="modalTagRight">
-                                <h2>Sign In</h2>
-                                <p>Sign in to add your own tags to this product.</p>
-                                <p>
+                                <h2 className="modalRightH2">Sign In</h2>
+                                <p className="modalRightP">Sign in to add your own tags to this product.</p>
+                                <p className="modalRightPP">
                                     <a className="modalSingIn" href="https://store.steampowered.com/login/?redir=app/70">
-                                        <span>Sign In</span>
+                                        <span className="modalSignInSpan">Sign In</span>
                                     </a>
                                 </p>
                             </div>
-                            <div classname="modalTagBottomSeperator"></div>
+                            <div className="modalTagBottomSeperator"></div>
+                        
+                        </div>
                         </div>
                     </div>
-                </div>
-                <div className="modalFooter">
-                    <div onClick={onClose} className="modalCloseFoot">
-                        <span>Close</span>
+                    <div className="modalFooter">
+                        <div onClick={onClose} className="modalCloseFoot">
+                            <span className="modalFooterSpan">Close</span>
+                        </div>
                     </div>
-                </div>
+                </div>    
             </div>
         </div> 
     )
