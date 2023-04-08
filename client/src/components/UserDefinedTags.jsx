@@ -1,7 +1,18 @@
 import React, {useState, useEffect} from "react";
 import "/src/styles/GameDescription.css"
+import TagModal from "./TagModal";
 
 function UserDefinedTags(){
+    const [showModal, setShowModal] = useState(false);
+
+    const handleClick = () => {
+        setShowModal(true);
+    }
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+    }
+
     return(
         <div>
             <a className="tag" href="https://store.steampowered.com/tags/en/FPS/">
@@ -22,9 +33,10 @@ function UserDefinedTags(){
             <a className="tag" href="https://store.steampowered.com/tags/en/Gore/">
                 Gore
             </a>
-            <div className="tagBtn">
+            <div onClick={handleClick}className="tagBtn">
                 +
             </div>
+            {showModal && <TagModal onClose={handleCloseModal} />}
         </div>
     )
 }
