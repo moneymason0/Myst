@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import '../styles/Header.css'
+
 
 const storeDropDown = ['HOME', 'DISCOVERY QUEUE', 'WISHLIST', 'POINTS SHOP', 'NEWS', 'STATS'];
 const communityDropDown = ['HOME', 'DISCUSSION', 'WORKSHOP', 'MARKET', 'BROADCASTS'];
@@ -54,7 +56,7 @@ const DropDowns = ({ dropDownList }) => {
   );
 };
 
-const HeaderTextButtons = ({ text, showDropdown, listDisplayed }) => {
+const HeaderTextButtons = ({ text, showDropdown, listDisplayed, id , className }) => {
   const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseEnter = () => {
@@ -67,7 +69,7 @@ const HeaderTextButtons = ({ text, showDropdown, listDisplayed }) => {
 
   return (
     <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <a type="submit">{text}</a>
+      <a type="submit" id={id} className={className}>{text}</a>
       {showDropdown && isHovering && <DropDowns dropDownList={listDisplayed} />}
     </div>
   );
@@ -75,17 +77,16 @@ const HeaderTextButtons = ({ text, showDropdown, listDisplayed }) => {
 
 function Header() {
   return (
-    <>
+    <div id='header'>
       <img src="https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" alt="Steam Logo" />
-      <HeaderTextButtons text="STORE" showDropdown={true} listDisplayed={storeDropDown} />
-      <HeaderTextButtons text="COMMUNITY" showDropdown={true} listDisplayed={communityDropDown} />
-      <HeaderTextButtons text="ABOUT" />
-      <HeaderTextButtons text="SUPPORT" />
-      // these below three are in the top right get rid of this text once that is resolved
-      <HeaderTextButtons text ="install steam"/>
-      <HeaderTextButtons text= "login" />
-      <HeaderTextButtons text= 'languages' showDropdown={true} listDisplayed={languagesDropDown}/> 
-    </>
+      <HeaderTextButtons className='next-to-logo' text="STORE" showDropdown={true} listDisplayed={storeDropDown} />
+      <HeaderTextButtons className='next-to-logo' text="COMMUNITY" showDropdown={true} listDisplayed={communityDropDown} />
+      <HeaderTextButtons className='next-to-logo' text="ABOUT" />
+      <HeaderTextButtons className='next-to-logo' text="SUPPORT" />
+      <HeaderTextButtons text ="Install Steam" id= 'install-steam'/>
+      <HeaderTextButtons className='next-to-install' text= "login" />
+      <HeaderTextButtons className='next-to-install' text= 'languages' showDropdown={true} listDisplayed={languagesDropDown}/> 
+    </div>
   );
 }
 
