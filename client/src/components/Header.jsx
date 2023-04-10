@@ -130,12 +130,14 @@ function Header() {
         <HeaderTextButtons className="menu_item" text="ABOUT" />
         <HeaderTextButtons className="menu_item" text="SUPPORT" />
       </div>
-      <div id="global_action_menu">
-        <HeaderTextButtons text="Install Steam" id="install-steam" />
-        <HeaderTextButtons className="next-to-install" text="login" />
+      <div id="global_action_menu_id">
+        <HeaderTextButtons className ="global_action_menu" text="Install Steam" id="install-steam" />
+        <HeaderTextButtons className="global_action_menu" text="login" id='login' />
+        &nbsp;|&nbsp;
         <HeaderTextButtons
-          className="next-to-install"
+          className="global_action_menu"
           text="languages"
+          id= 'languages'
           showDropdown={true}
           listDisplayed={languagesDropDown}
         />

@@ -22,14 +22,38 @@
     float: left;
     padding-top: 30px;
     margin-right: 40px;
-    width: 176px;
+    width: 150;
     height: 44px;
+    position: absolute;
+    top: 30px ;
+    left: -200px;
+    
 }
 
+/*buttons next to the steam logo*/
+.menu_item{
+    display: block;
+position: relative;
+padding-top: 45px;
+padding-left: 7px;
+padding-right: 7px;
+padding-bottom: 7px;
+line-height: 16px;
+float: left;
+font-size: 14px;
+color: #b8b6b4;
+text-transform: uppercase;
+}
 
-
-
-
+/* container for the drop downs*/
+.supernav_content{
+max-width: 132px;
+background: #000 url(https://store.akamai.steamstatic.com/public/shared/images/dd_web.jpg) top left no-repeat;
+padding: 5px 15px 10px 15px;
+box-shadow: 3px 3px 5px -3px #000;
+text-align: left;
+z-index: 500;
+}
 
 
 /*store, community, about support*/
@@ -47,10 +71,8 @@
     line-height: 24px;
     vertical-align: top;
     display: inline-block;
+
 }
-
-
-
 
 
 /* install steam button is a child of the global action menu*/
@@ -76,30 +98,16 @@
 
 
 
-
-
-/*buttons next to the steam logo, will rename to menu item*/
-.menu_item{
-        display: block;
-    position: relative;
-    padding-top: 45px;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-bottom: 7px;
-    line-height: 16px;
-    float: left;
-    font-size: 14px;
-    color: #b8b6b4;
-    text-transform: uppercase;
+#login{
+color: #b8b6b4;
 }
 
-.supernav_content{
-    max-width: 132px;
-    background: #000 url(https://store.akamai.steamstatic.com/public/shared/images/dd_web.jpg) top left no-repeat;
-    padding: 5px 15px 10px 15px;
-    box-shadow: 3px 3px 5px -3px #000;
-    text-align: left;
-    z-index: 500;
+#languages{
+color: #b8b6b4;
 }
+
+
+
+
 
 
