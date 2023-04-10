@@ -2,7 +2,7 @@ import GameDescription from './components/GameDescription'
 import Header from './components/Header'
 import ImageCarousel from './components/ImageCarousel'
 import GameMetaData from './components/GameMetaData';
-import "./App.css"
+import "./styles/App.css"
 
 const images = [
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002348.600x338.jpg?t=1666824272',
@@ -24,8 +24,9 @@ function App() {
           <ImageCarousel images={images}/>
           </div>
           <GameDescription />
+          <GameMetaData />  
         </div>
-        <GameMetaData />        
+              
       </div>
 
     </div>
