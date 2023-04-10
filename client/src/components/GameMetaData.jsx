@@ -1,11 +1,13 @@
 import React from "react";
 import GameRelevency from "./GameRelevency";
+import GameCapabilities from "./GameCapabilities";
 import "/src/styles/GameMetaData.css"
 
 function GameMetaData(){
     return (
         <div className="column">
-            <GameRelevency />   
+            <GameRelevency />
+            <GameCapabilities />   
         </div>
         
     )
