@@ -17,3 +17,32 @@
     padding: 0;
     display: block;
 }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-and-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px; /* You can adjust this value according to your desired layout width */
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.ImageCarousel {
+  flex: 1;
+  max-width: 600px; /* You can adjust this value according to your desired carousel width */
+  margin-right: 20px;
+}
+
+.game-description-wrapper {
+  flex: 1;
+  max-width: 600px; /* You can adjust this value according to your desired game description width */
+}

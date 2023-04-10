@@ -14,24 +14,25 @@ const images = [
 ];
 
 function App() {
-
   return (
-    <div >
-      <Header />
+    <div className="picture">
       <div className="background">
-        <div className="picture">
+          <Header />
+        <div className="app">
           <div>
-          <ImageCarousel images={images}/>
+            <div className="carousel-and-content">
+              <ImageCarousel images={images} />
+            </div>
+            <div className="game-description-wrapper">
+              <GameDescription />
+            </div>
+            <GameMetaData />
           </div>
-          <GameDescription />
-          <GameMetaData />  
         </div>
-              
       </div>
-
     </div>
-
-  )
+  );
 }
+
 
 export default App
