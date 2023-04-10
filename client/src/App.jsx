@@ -1,6 +1,7 @@
 import GameDescription from './components/GameDescription'
 import Header from './components/Header'
 import ImageCarousel from './components/ImageCarousel'
+import './styles/App.css'
 
 const images = [
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002348.600x338.jpg?t=1666824272',
@@ -12,16 +13,18 @@ const images = [
 ];
 
 function App() {
-
   return (
-    <div >
+    <div className="app">
       <Header />
-      <div>
-      <ImageCarousel images={images} />
+      <div className="carousel-and-content">
+        <ImageCarousel images={images} />
+        <div className="game-description-wrapper">
+          <GameDescription />
+        </div>
       </div>
-      <GameDescription />
     </div>
-  )
+  );
 }
+
 
 export default App

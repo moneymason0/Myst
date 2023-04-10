@@ -41,7 +41,7 @@ function ImageCarousel({ images }) {
     }, []);
 
     return (
-        <Container>
+        <Container className="ImageCarousel">
             <ImageSlider ref={sliderRef} {...settings}>
                 {images.map((src, index) => (
                     <div key={index}>
