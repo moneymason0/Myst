@@ -55,6 +55,9 @@ const DropDowns = ({ dropDownList, handleDropdownClick }) => {
     handleDropdownClick(event);
   };
 
+
+
+
   const renderDropDownList = dropDownList.map((listItem, index) => (
     <option key={index}>{listItem}</option>
   ));
