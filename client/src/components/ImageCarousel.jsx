@@ -49,6 +49,17 @@ function ImageCarousel({ images }) {
                     </div>
                 ))}
             </ImageSlider>
+            <div className="thumbnail-bar">
+                {images.map((src, index) => (
+                    <div
+                        key={index}
+                        className={`thumbnail ${index === currentSlide ? 'active' : ''}`}
+                        onClick={() => handleThumbnailClick(index)}
+                    >
+                        <img src={src} alt={`Thumbnail ${index + 1}`} />
+                    </div>
+                ))}
+            </div>
             <div className="arrows">
                 <Button className="arrow-btn" onClick={handlePrev}>
                     &lt;
@@ -67,17 +78,6 @@ function ImageCarousel({ images }) {
                 <Button className="arrow-btn" onClick={handleNext}>
                     &gt;
                 </Button>
-            </div>
-            <div className="thumbnail-bar">
-                {images.map((src, index) => (
-                    <div
-                        key={index}
-                        className={`thumbnail ${index === currentSlide ? 'active' : ''}`}
-                        onClick={() => handleThumbnailClick(index)}
-                    >
-                        <img src={src} alt={`Thumbnail ${index + 1}`} />
-                    </div>
-                ))}
             </div>
         </Container>
     );
