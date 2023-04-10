@@ -62,16 +62,19 @@ z-index: 500;
     left: 200px;
 }
 
-
-
+/* this moves the entire div containing these buttons */
+#global_action_menu_id{
+    position: absolute ;
+    right: 0px;
+    top: 10px;
+}
 
 /*the global action menu class*/
-/* the group of buttons includes install steam, language, login*/
+/* applies attributes to install steam, language, login*/
 .global_action_menu{
     line-height: 24px;
     vertical-align: top;
     display: inline-block;
-
 }
 
 
@@ -89,7 +92,7 @@ z-index: 500;
     background-repeat: no-repeat;
     text-decoration: none;
     color: #e5e4dc;
-    font-weight: normal;    display: inline-block;
+    font-weight: normal;    
     position: relative;
     height: 21px;
     line-height: 24px;
