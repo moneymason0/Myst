@@ -47,11 +47,12 @@ const languagesDropDown = [
   "Report a translation problem",
 ];
 
-const DropDowns = ({ dropDownList }) => {
+const DropDowns = ({ dropDownList, handleDropdownClick }) => {
   const [selectedOption, setSelectedOption] = useState("");
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
+    handleDropdownClick(event);
   };
 
   const renderDropDownList = dropDownList.map((listItem, index) => (
@@ -60,7 +61,7 @@ const DropDowns = ({ dropDownList }) => {
 
   return (
     <>
-      <select value={selectedOption} onChange={handleChange}>
+      <select onClick={handleDropdownClick} value={selectedOption} onChange={handleChange}>
         {renderDropDownList}
       </select>
     </>
@@ -73,29 +74,45 @@ const HeaderTextButtons = ({
   listDisplayed,
   id,
   className,
+  dropdownTrigger = "hover",
 }) => {
-  const [isHovering, setIsHovering] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleMouseEnter = () => {
-    setIsHovering(true);
+    if (dropdownTrigger === "hover") {
+      setIsOpen(true);
+    }
   };
 
   const handleMouseLeave = () => {
-    setIsHovering(false);
+    if (dropdownTrigger === "hover") {
+      setIsOpen(false);
+    }
+  };
+
+  const handleClick = () => {
+    if (dropdownTrigger === "click") {
+      setIsOpen(!isOpen);
+    }
+  };
+
+  const handleDropdownClick = (event) => {
+    event.stopPropagation();
   };
 
   return (
     <div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
       style={{ position: "relative", display: "inline-block" }}
     >
       <a type="submit" id={id} className={className}>
         {text}
       </a>
-      {showDropdown && isHovering && (
+      {showDropdown && isOpen && (
         <div style={{ position: "absolute", left: 0, top: "100%" }}>
-          <DropDowns dropDownList={listDisplayed} />
+          <DropDowns dropDownList={listDisplayed} handleDropdownClick={handleDropdownClick} />
         </div>
       )}
     </div>
@@ -105,46 +122,49 @@ const HeaderTextButtons = ({
 function Header() {
   return (
     <div id="global_header">
-      <div className="content"> 
-      <div class="logo">
-        <div id='logo'>
-        <img
-          src="https://cdn.discordapp.com/attachments/1093286027059282142/1095097436701200546/MYST-gray-brown-logo-small.png"
-          alt="Steam Logo"
-        />{" "}
+      <div className="content">
+        <div class="logo">
+          <div id="logo">
+            <img
+              src="https://cdn.discordapp.com/attachments/1093286027059282142/1095097436701200546/MYST-gray-brown-logo-small.png"
+              alt="Steam Logo"
+            />{" "}
+          </div>
+        </div>
+        <div className="supernav_container">
+          <HeaderTextButtons
+            className="menu_item"
+            text="STORE"
+            showDropdown={true}
+            listDisplayed={storeDropDown}
+            dropdownTrigger="hover"
+          />
+          <HeaderTextButtons
+            className="menu_item"
+            text="COMMUNITY"
+            showDropdown={true}
+            listDisplayed={communityDropDown}
+            dropdownTrigger="hover"
+          />
+          <HeaderTextButtons className="menu_item" text="ABOUT" />
+          <HeaderTextButtons className="menu_item" text="SUPPORT" />
+        </div>
+        <div id="global_action_menu_id">
+          <HeaderTextButtons className="global_action_menu" text="Install Steam" id="install-steam" />
+          <HeaderTextButtons className="global_action_menu" text="login" id="login" />
+          &nbsp;|&nbsp;
+          <HeaderTextButtons
+            className="global_action_menu"
+            text="language &#x25BC;"
+            id="languages"
+            showDropdown={true}
+            listDisplayed={languagesDropDown}
+            dropdownTrigger="click"
+          />
         </div>
       </div>
-      <div className="supernav_container">
-        <HeaderTextButtons
-          className="menu_item"
-          text="STORE"
-          showDropdown={true}
-          listDisplayed={storeDropDown}
-        />
-        <HeaderTextButtons
-          className="menu_item"
-          text="COMMUNITY"
-          showDropdown={true}
-          listDisplayed={communityDropDown}
-        />
-        <HeaderTextButtons className="menu_item" text="ABOUT" />
-        <HeaderTextButtons className="menu_item" text="SUPPORT" />
-      </div>
-      <div id="global_action_menu_id">
-        <HeaderTextButtons className ="global_action_menu" text="Install Steam" id="install-steam" />
-        <HeaderTextButtons className="global_action_menu" text="login" id='login' />
-        &nbsp;|&nbsp;
-        <HeaderTextButtons
-          className="global_action_menu"
-          text="language &#x25BC;"
-          id= 'languages'
-          showDropdown={true}
-          listDisplayed={languagesDropDown}
-        />
-      </div>
-      </div>
     </div>
-  );
-}
+  )};
+
 
 export default Header;
