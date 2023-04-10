@@ -31,6 +31,9 @@ function ImageCarousel({ images }) {
         sliderRef.current.slickNext();
     }, []);
     // Thumbnail click
+    const handleThumbnailClick = useCallback((index) => {
+        sliderRef.current.slickGoTo(index);
+    }, []);
 
     return (
         <Container>
@@ -49,8 +52,19 @@ function ImageCarousel({ images }) {
                     &gt;
                 </Button>
             </div>
+            <div className="thumbnail-bar">
+                    {images.map((src, index) => (
+                        <div
+                        key={index}
+                        className={`thumbnail ${index === currentSlide ? 'active' : ''}`}
+                        onClick={() => handleThumbnailClick(index)}
+                        >
+                            <img src={src} alt={`Thumbnail ${index + 1}`} />
+                        </div> 
+                    ))}
+            </div>
         </Container>
     );
-}
+};
 
 export default ImageCarousel;

@@ -9,7 +9,6 @@ const images = [
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002342.600x338.jpg?t=1666824272',
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002351.600x338.jpg?t=1666824272',
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002350.600x338.jpg?t=1666824272'
-
 ];
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
     <div >
       <Header />
       <div>
-      <ImageCarousel images={images}/>
+      <ImageCarousel images={images} />
       </div>
       <GameDescription />
     </div>
