@@ -15,16 +15,16 @@ const images = [
 
 function App() {
   return (
-    <div className="picture">
-      <div className="background">
+    <div className="background">
+      <div className="picture">
         <Header />
         <div className="app">
           <div>
             <div className="carousel-and-content">
               <ImageCarousel images={images} />
-            </div>
             <div className="game-description-wrapper">
               <GameDescription />
+            </div>
             </div>
             <GameMetaData />
           </div>
