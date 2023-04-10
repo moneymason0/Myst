@@ -28,26 +28,46 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
+  padding: 15px 0;
 }
 
 .arrow-btn {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #333;
+  position: relative;
+  background-color: #162330;
   border: none;
-  padding: 8px 12px;
-  font-size: 24px;
-  pointer-events: all;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: bold;
   cursor: pointer;
+  border-radius: 3px;
 }
 
 .arrow-btn:hover {
   background-color: rgba(255, 255, 255, 1);
+}
+
+.arrow-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-width: 10px 10px 10px 0;
+  border-style: solid;
+  border-color: transparent #203749 transparent transparent;
+}
+
+.arrow-btn:last-child::before {
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #203749;
+}
+
+.arrow-btn:hover::before {
+  border-color: transparent #ffffff transparent transparent;
+}
+
+.arrow-btn:last-child:hover::before {
+  border-color: transparent transparent transparent #ffffff;
 }
 
 .thumbnail-bar {
@@ -84,8 +104,9 @@
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
-  height: 6px;
-  background: #ccc;
+  margin-top: 4px;
+  height: 40px;
+  background: #0B1017;
   outline: none;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
@@ -95,10 +116,11 @@
 .horizontal-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
-  background: #333;
+  width: 40px;
+  height: 35px;
+  background: #152330;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .horizontal-slider::-moz-range-thumb {
@@ -106,4 +128,5 @@
   height: 20px;
   background: #333;
   cursor: pointer;
+  margin-top: -3px;
 }
