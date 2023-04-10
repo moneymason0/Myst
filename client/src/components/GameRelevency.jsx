@@ -4,7 +4,7 @@ import "/src/styles/GameRelevency.css"
 function GameRelevency(){
     return(
     <>
-        <div>
+        <div className="title">
             Is this game relevent to you?
         </div>
         <div>

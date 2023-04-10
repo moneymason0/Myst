@@ -4,7 +4,10 @@ import "/src/styles/GameMetaData.css"
 
 function GameMetaData(){
     return (
-        <GameRelevency />
+        <div className="column">
+            <GameRelevency />   
+        </div>
+        
     )
 }
 
