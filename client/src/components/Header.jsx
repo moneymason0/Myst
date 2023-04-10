@@ -1,9 +1,21 @@
-import React, { useState } from 'react';
-import '../styles/Header.css'
+import React, { useState } from "react";
+import "../styles/Header.css";
 
-
-const storeDropDown = ['HOME', 'DISCOVERY QUEUE', 'WISHLIST', 'POINTS SHOP', 'NEWS', 'STATS'];
-const communityDropDown = ['HOME', 'DISCUSSION', 'WORKSHOP', 'MARKET', 'BROADCASTS'];
+const storeDropDown = [
+  "HOME",
+  "DISCOVERY QUEUE",
+  "WISHLIST",
+  "POINTS SHOP",
+  "NEWS",
+  "STATS",
+];
+const communityDropDown = [
+  "HOME",
+  "DISCUSSION",
+  "WORKSHOP",
+  "MARKET",
+  "BROADCASTS",
+];
 const languagesDropDown = [
   "简体中文 (Simplified Chinese)",
   "繁體中文 (Traditional Chinese)",
@@ -32,16 +44,19 @@ const languagesDropDown = [
   "Türkçe (Turkish)",
   "Tiếng Việt (Vietnamese)",
   "Українська (Ukrainian)",
-  "Report a translation problem"
+  "Report a translation problem",
 ];
 
-
-const DropDowns = ({ dropDownList }) => {
-  const [selectedOption, setSelectedOption] = useState('');
+const DropDowns = ({ dropDownList, handleDropdownClick }) => {
+  const [selectedOption, setSelectedOption] = useState("");
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
+    handleDropdownClick(event);
   };
+
+
+
 
   const renderDropDownList = dropDownList.map((listItem, index) => (
     <option key={index}>{listItem}</option>
@@ -49,45 +64,110 @@ const DropDowns = ({ dropDownList }) => {
 
   return (
     <>
-      <select value={selectedOption} onChange={handleChange}>
+      <select onClick={handleDropdownClick} value={selectedOption} onChange={handleChange}>
         {renderDropDownList}
       </select>
     </>
   );
 };
 
-const HeaderTextButtons = ({ text, showDropdown, listDisplayed, id , className }) => {
-  const [isHovering, setIsHovering] = useState(false);
+const HeaderTextButtons = ({
+  text,
+  showDropdown,
+  listDisplayed,
+  id,
+  className,
+  dropdownTrigger = "hover",
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleMouseEnter = () => {
-    setIsHovering(true);
+    if (dropdownTrigger === "hover") {
+      setIsOpen(true);
+    }
   };
 
   const handleMouseLeave = () => {
-    setIsHovering(false);
+    if (dropdownTrigger === "hover") {
+      setIsOpen(false);
+    }
+  };
+
+  const handleClick = () => {
+    if (dropdownTrigger === "click") {
+      setIsOpen(!isOpen);
+    }
+  };
+
+  const handleDropdownClick = (event) => {
+    event.stopPropagation();
   };
 
   return (
-    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <a type="submit" id={id} className={className}>{text}</a>
-      {showDropdown && isHovering && <DropDowns dropDownList={listDisplayed} />}
+    <div
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
+      style={{ position: "relative", display: "inline-block" }}
+    >
+      <a type="submit" id={id} className={className}>
+        {text}
+      </a>
+      {showDropdown && isOpen && (
+        <div style={{ position: "absolute", left: 0, top: "100%" }}>
+          <DropDowns dropDownList={listDisplayed} handleDropdownClick={handleDropdownClick} />
+        </div>
+      )}
     </div>
   );
 };
 
 function Header() {
   return (
-    <div id='header'>
-      <img src="https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" alt="Steam Logo" />
-      <HeaderTextButtons className='next-to-logo' text="STORE" showDropdown={true} listDisplayed={storeDropDown} />
-      <HeaderTextButtons className='next-to-logo' text="COMMUNITY" showDropdown={true} listDisplayed={communityDropDown} />
-      <HeaderTextButtons className='next-to-logo' text="ABOUT" />
-      <HeaderTextButtons className='next-to-logo' text="SUPPORT" />
-      <HeaderTextButtons text ="Install Steam" id= 'install-steam'/>
-      <HeaderTextButtons className='next-to-install' text= "login" />
-      <HeaderTextButtons className='next-to-install' text= 'languages' showDropdown={true} listDisplayed={languagesDropDown}/> 
+    <div id="global_header">
+      <div className="content">
+        <div class="logo">
+          <div id="logo">
+            <img
+              src="https://cdn.discordapp.com/attachments/1093286027059282142/1095097436701200546/MYST-gray-brown-logo-small.png"
+              alt="Steam Logo"
+            />{" "}
+          </div>
+        </div>
+        <div className="supernav_container">
+          <HeaderTextButtons
+            className="menu_item"
+            text="STORE"
+            showDropdown={true}
+            listDisplayed={storeDropDown}
+            dropdownTrigger="hover"
+          />
+          <HeaderTextButtons
+            className="menu_item"
+            text="COMMUNITY"
+            showDropdown={true}
+            listDisplayed={communityDropDown}
+            dropdownTrigger="hover"
+          />
+          <HeaderTextButtons className="menu_item" text="ABOUT" />
+          <HeaderTextButtons className="menu_item" text="SUPPORT" />
+        </div>
+        <div id="global_action_menu_id">
+          <HeaderTextButtons className="global_action_menu" text="Install Steam" id="install-steam" />
+          <HeaderTextButtons className="global_action_menu" text="login" id="login" />
+          &nbsp;|&nbsp;
+          <HeaderTextButtons
+            className="global_action_menu"
+            text="language &#x25BC;"
+            id="languages"
+            showDropdown={true}
+            listDisplayed={languagesDropDown}
+            dropdownTrigger="click"
+          />
+        </div>
+      </div>
     </div>
-  );
-}
+  )};
+
 
 export default Header;
