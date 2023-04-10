@@ -57,6 +57,11 @@
   border-color: transparent #203749 transparent transparent;
 }
 
+.slick-next:before,
+.slick-prev:before {
+  display: none !important;
+}
+
 .arrow-btn:last-child::before {
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent #203749;

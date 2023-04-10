@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="picture">
       <div className="background">
-          <Header />
+        <Header />
         <div className="app">
           <div>
             <div className="carousel-and-content">
