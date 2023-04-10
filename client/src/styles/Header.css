@@ -107,6 +107,11 @@ option{
     color: #b8b6b4;
 }
 
+select{
+    background: #171a21;
+    color: #b8b6b4; 
+    border:#171a21;
+}
 #login{
 color: #b8b6b4;
 cursor: pointer;
