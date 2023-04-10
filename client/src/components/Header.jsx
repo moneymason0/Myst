@@ -85,11 +85,19 @@ const HeaderTextButtons = ({
   };
 
   return (
-    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      style={{ position: "relative", display: "inline-block" }}
+    >
       <a type="submit" id={id} className={className}>
         {text}
       </a>
-      {showDropdown && isHovering && <DropDowns dropDownList={listDisplayed} />}
+      {showDropdown && isHovering && (
+        <div style={{ position: "absolute", left: 0, top: "100%" }}>
+          <DropDowns dropDownList={listDisplayed} />
+        </div>
+      )}
     </div>
   );
 };
