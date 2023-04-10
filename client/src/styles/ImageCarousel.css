@@ -1,28 +1,28 @@
 .carousel {
-    display: flex;
-    overflow-x: scroll;
-    scrollbar-width: thin;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .carousel img {
-    flex-shrink: 0;
-    scroll-snap-align: start;
-    width: 90%;
-    height: auto;
-  }
-  
-  .carousel::-webkit-scrollbar {
-    height: 5px;
-  }
-  
-  .carousel::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 3px;
-  }
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel img {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  width: 90%;
+  height: auto;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 5px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
 
 .arrows {
   display: flex;
@@ -43,8 +43,7 @@
   padding: 8px 12px;
   font-size: 24px;
   pointer-events: all;
-  cursor: pointer; 
-
+  cursor: pointer;
 }
 
 .arrow-btn:hover {
@@ -67,11 +66,44 @@
 }
 
 .thumbnail img {
-  width: 90%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .thumbnail.active {
   border-color: red;
+}
+
+.range-slider {
+  position: relative;
+  width: 100%;
+}
+
+.horizontal-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #ccc;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.horizontal-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #333;
+  cursor: pointer;
+}
+
+.horizontal-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #333;
+  cursor: pointer;
 }
