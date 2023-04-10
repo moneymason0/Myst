@@ -136,7 +136,7 @@ function Header() {
         &nbsp;|&nbsp;
         <HeaderTextButtons
           className="global_action_menu"
-          text="languages"
+          text="language &#x25BC;"
           id= 'languages'
           showDropdown={true}
           listDisplayed={languagesDropDown}

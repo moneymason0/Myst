@@ -27,6 +27,7 @@
     position: absolute;
     top: 30px ;
     left: -200px;
+    cursor: pointer;
     
 }
 
@@ -43,6 +44,7 @@ float: left;
 font-size: 14px;
 color: #b8b6b4;
 text-transform: uppercase;
+cursor: pointer;
 }
 
 /* container for the drop downs*/
@@ -97,16 +99,19 @@ z-index: 500;
     height: 21px;
     line-height: 24px;
     margin-right: 3px;
+    cursor: pointer;
 }
 
 
 
 #login{
 color: #b8b6b4;
+cursor: pointer;
 }
 
 #languages{
 color: #b8b6b4;
+cursor: pointer;
 }
 
 
