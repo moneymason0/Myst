@@ -109,7 +109,7 @@ function Header() {
       <div class="logo">
         <div id='logo'>
         <img
-          src="https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
+          src="https://cdn.discordapp.com/attachments/1093286027059282142/1095097436701200546/MYST-gray-brown-logo-small.png"
           alt="Steam Logo"
         />{" "}
         </div>

@@ -18,11 +18,11 @@
     z-index: 402;
 }
 
-.logo{
+#logo{
     float: left;
     padding-top: 30px;
     margin-right: 40px;
-    width: 150;
+    width: 100px;
     height: 44px;
     position: absolute;
     top: 30px ;
@@ -30,6 +30,7 @@
     cursor: pointer;
     
 }
+
 
 /*buttons next to the steam logo*/
 .menu_item{
