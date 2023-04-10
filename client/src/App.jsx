@@ -15,10 +15,10 @@ const images = [
 
 function App() {
   return (
-    <div className="app">
-      <Header />
+    <div className="picture">
       <div className="background">
-        <div className="picture">
+          <Header />
+        <div className="app">
           <div>
             <div className="carousel-and-content">
               <ImageCarousel images={images} />
