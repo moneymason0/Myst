@@ -55,5 +55,18 @@ const DropDowns = ({ dropDownList, handleDropdownClick }) => {
       </>
     );
   };
+
+  const renderDropDownList = dropDownList.map((listItem, index) => (
+    <option key={index}>{listItem}</option>
+  ));
+
+  return (
+    <>
+      <select onClick={handleDropdownClick} value={selectedOption} onChange={handleChange}>
+        {renderDropDownList}
+      </select>
+    </>
+  );
+;
   
   export default DropDowns

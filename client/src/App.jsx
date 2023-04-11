@@ -3,6 +3,7 @@ import Header from './components/Header'
 import ImageCarousel from './components/ImageCarousel'
 import GameMetaData from './components/GameMetaData';
 import "./styles/App.css"
+// import DropDowns from './components/Nav-bar';
 
 const images = [
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002348.600x338.jpg?t=1666824272',
