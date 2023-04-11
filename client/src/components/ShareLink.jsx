@@ -1,16 +1,16 @@
-import React from "react";
-import ShareModal from "./ShareModal";
-import EmbedModal from "./EmbedModal";
-import ReportModal from "./ReportModal";
+import React, {useContext} from "react";
 import "/src/styles/ShareLink.css"
+import ModalContext from "../context/ModalContext";
 
 function ShareLink(){
+    const {handleShareClick, handleEmbedClick} = useContext(ModalContext)
     return(
+    
         <div className="linkRow">
-            <a className="linkbtn" href="">
-                <span className="linkText">Share</span> 
+            <a className="linkbtn" onClick={handleShareClick}>
+                <span className="linkText" >Share</span> 
             </a>
-            <a className="linkbtn" href="">
+            <a className="linkbtn" onClick={handleEmbedClick}>
                 <span className="linkText">Embed</span>
             </a>
             <a className="linkbtn" href="">

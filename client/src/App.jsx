@@ -1,7 +1,11 @@
+import { useState, useContext } from 'react';
 import GameDescription from './components/GameDescription'
 import Header from './components/Header'
 import ImageCarousel from './components/ImageCarousel'
 import GameMetaData from './components/GameMetaData';
+import ShareModal from './components/ShareModal';
+import EmbedModal from './components/EmbedModal';
+import ModalContext from './context/ModalContext';
 import "./styles/App.css"
 import DropDowns from './components/Nav-bar';
 
@@ -15,12 +19,16 @@ const images = [
 ];
 
 function App() {
+  //used to handle state of the Share modal
+  const {showShareModal, showEmbedModal} = useContext(ModalContext)
+  
   return (
     <div className="background">
       <div className="picture">
         <Header />
         <div className="app">
           <div>
+            
             <div className="carousel-and-content">
               <ImageCarousel images={images} />
             <div className="game-description-wrapper">
@@ -29,6 +37,8 @@ function App() {
             </div>
             <GameMetaData />
           </div>
+            {showShareModal && <ShareModal />}
+            {showEmbedModal && <EmbedModal />}
         </div>
       </div>
     </div>
