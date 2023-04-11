@@ -27,7 +27,7 @@ const sportsRacing = categories['Sports & Racing'];
 
 // parameters are the dropDownList inserted into the component, and the fn used
 // to handle the click on the drop down
-const DropDowns = ({ dropDownList, handleDropdownClick }) => {
+const DropDowns = ({ dropDownList, handleDropdownHover }) => {
     // selected option is the variable set blank here,
     // setSelectedOption is the fn that determines its value
     const [selectedOption, setSelectedOption] = useState("");
@@ -37,7 +37,7 @@ const DropDowns = ({ dropDownList, handleDropdownClick }) => {
     // will trigger the setSelectedOption fn
     const handleChange = (event) => {
       setSelectedOption(event.target.value);
-      handleDropdownClick(event);
+      handleDropdownHover(event);
     };
   
   
@@ -49,7 +49,7 @@ const DropDowns = ({ dropDownList, handleDropdownClick }) => {
   
     return (
       <>
-        <select onClick={handleDropdownClick} value={selectedOption} onChange={handleChange}>
+        <select onMouseEnter={handleDropdownHover} value={selectedOption} onChange={handleChange}>
           {renderDropDownList}
         </select>
       </>
@@ -78,21 +78,12 @@ const DropDowns = ({ dropDownList, handleDropdownClick }) => {
       }
     };
   
-    const handleClick = () => {
-      if (dropdownTrigger === "click") {
-        setIsOpen(!isOpen);
-      }
-    };
   
-    const handleDropdownClick = (event) => {
-      event.stopPropagation();
-    };
   
     return (
       <div
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        onClick={handleClick}
         style={{ position: "relative", display: "inline-block" }}
       >
         <a type="submit" id={id} className={className}>
@@ -100,7 +91,7 @@ const DropDowns = ({ dropDownList, handleDropdownClick }) => {
         </a>
         {showDropdown && isOpen && (
           <div style={{ position: "absolute", left: 0, top: "100%" }}>
-            <DropDowns dropDownList={listDisplayed} handleDropdownClick={handleDropdownClick} />
+            <DropDowns dropDownList={listDisplayed} handleDropdownHover={handleDropdownHover} />
           </div>
         )}
       </div>
@@ -111,34 +102,30 @@ const DropDowns = ({ dropDownList, handleDropdownClick }) => {
   function NavBar() {
     return (
       <div>
-        <div className="supernav_container">
-          <HeaderTextButtons
-            className="menu_item"
-            text="STORE"
+        <div className="nav-bar-button-list">
+          <NavBarTextButtons
+            text="Your Store"
             showDropdown={true}
-            listDisplayed={storeDropDown}
-            dropdownTrigger="hover"
+            listDisplayed={yourStore}
           />
-          <HeaderTextButtons
-            className="menu_item"
-            text="COMMUNITY"
+            <NavBarTextButtons
+            text="New & NoteWorthy"
             showDropdown={true}
-            listDisplayed={communityDropDown}
-            dropdownTrigger="hover"
+            listDisplayed={newAndNoteWorthy}
           />
-          <HeaderTextButtons className="menu_item" text="ABOUT" />
-          <HeaderTextButtons className="menu_item" text="SUPPORT" />
-        </div>
-        <div id="global_action_menu_id">
-          <HeaderTextButtons className="global_action_menu" text="Install Steam" id="install-steam" />
-          <HeaderTextButtons className="global_action_menu" text="login" id="login" />
-          <HeaderTextButtons
-            className="global_action_menu"
-            text="language &#x25BC;"
-            id="languages"
+            <NavBarTextButtons
+            text="Categories"
             showDropdown={true}
-            listDisplayed={languagesDropDown}
-            dropdownTrigger="click"
+            listDisplayed={categories}
+          />
+            <NavBarTextButtons
+            text="Points Shop"
+          />
+            <NavBarTextButtons
+            text="News"
+          />
+            <NavBarTextButtons
+            text="Labs"
           />
         </div>
       </div>

@@ -7,7 +7,7 @@ import ShareModal from './components/ShareModal';
 import EmbedModal from './components/EmbedModal';
 import ModalContext from './context/ModalContext';
 import "./styles/App.css"
-import DropDowns from './components/Nav-bar';
+import NavBar from './components/Nav-bar';
 
 const images = [
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002348.600x338.jpg?t=1666824272',
@@ -27,6 +27,7 @@ function App() {
       <div className="picture">
         <Header />
         <div className="app">
+        <NavBar />
           <div>
             
             <div className="carousel-and-content">
