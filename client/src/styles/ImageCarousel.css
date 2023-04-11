@@ -28,14 +28,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  padding: 2px 0;
 }
 
 .arrow-btn {
   position: relative;
   background-color: #162330;
   border: none;
-  padding: 10px 15px;
+  padding: 1px 20px;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
@@ -43,7 +43,7 @@
 }
 
 .arrow-btn:hover {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #326B9C;
 }
 
 .arrow-btn::before {
@@ -79,7 +79,7 @@
   display: flex;
   justify-content: left;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: .15rem;
 }
 
 .thumbnail {
@@ -110,7 +110,7 @@
   appearance: none;
   width: 100%;
   margin-top: 4px;
-  height: 40px;
+  height: 25px;
   background: #0B1017;
   outline: none;
   -webkit-transition: 0.2s;
@@ -118,14 +118,18 @@
   cursor: pointer;
 }
 
+.horizontal-slider::-webkit-slider-thumb:hover {
+  background-color: #326B9C;
+}
+
 .horizontal-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 40px;
-  height: 35px;
+  height: 23px;
   background: #152330;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .horizontal-slider::-moz-range-thumb {
