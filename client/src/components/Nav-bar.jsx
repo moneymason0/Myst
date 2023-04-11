@@ -56,17 +56,99 @@ const DropDowns = ({ dropDownList, handleDropdownClick }) => {
     );
   };
 
-  const renderDropDownList = dropDownList.map((listItem, index) => (
-    <option key={index}>{listItem}</option>
-  ));
-
-  return (
-    <>
-      <select onClick={handleDropdownClick} value={selectedOption} onChange={handleChange}>
-        {renderDropDownList}
-      </select>
-    </>
-  );
-;
+  const NavBarTextButtons = ({
+    text,
+    showDropdown,
+    listDisplayed,
+    id,
+    className,
+    dropdownTrigger = "hover",
+  }) => {
+    const [isOpen, setIsOpen] = useState(false);
   
-  export default DropDowns
+    const handleMouseEnter = () => {
+      if (dropdownTrigger === "hover") {
+        setIsOpen(true);
+      }
+    };
+  
+    const handleMouseLeave = () => {
+      if (dropdownTrigger === "hover") {
+        setIsOpen(false);
+      }
+    };
+  
+    const handleClick = () => {
+      if (dropdownTrigger === "click") {
+        setIsOpen(!isOpen);
+      }
+    };
+  
+    const handleDropdownClick = (event) => {
+      event.stopPropagation();
+    };
+  
+    return (
+      <div
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onClick={handleClick}
+        style={{ position: "relative", display: "inline-block" }}
+      >
+        <a type="submit" id={id} className={className}>
+          {text}
+        </a>
+        {showDropdown && isOpen && (
+          <div style={{ position: "absolute", left: 0, top: "100%" }}>
+            <DropDowns dropDownList={listDisplayed} handleDropdownClick={handleDropdownClick} />
+          </div>
+        )}
+      </div>
+    );
+  };
+  
+
+  function NavBar() {
+    return (
+      <div>
+        <div className="supernav_container">
+          <HeaderTextButtons
+            className="menu_item"
+            text="STORE"
+            showDropdown={true}
+            listDisplayed={storeDropDown}
+            dropdownTrigger="hover"
+          />
+          <HeaderTextButtons
+            className="menu_item"
+            text="COMMUNITY"
+            showDropdown={true}
+            listDisplayed={communityDropDown}
+            dropdownTrigger="hover"
+          />
+          <HeaderTextButtons className="menu_item" text="ABOUT" />
+          <HeaderTextButtons className="menu_item" text="SUPPORT" />
+        </div>
+        <div id="global_action_menu_id">
+          <HeaderTextButtons className="global_action_menu" text="Install Steam" id="install-steam" />
+          <HeaderTextButtons className="global_action_menu" text="login" id="login" />
+          <HeaderTextButtons
+            className="global_action_menu"
+            text="language &#x25BC;"
+            id="languages"
+            showDropdown={true}
+            listDisplayed={languagesDropDown}
+            dropdownTrigger="click"
+          />
+        </div>
+      </div>
+    );
+  }
+  
+  
+
+
+
+
+  
+  export default NavBar
