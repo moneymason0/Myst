@@ -4,12 +4,12 @@ import GameCapabilities from "./GameCapabilities";
 import ShareLink from "./ShareLink";
 import "/src/styles/GameMetaData.css"
 
-function GameMetaData(){
+function GameMetaData({setShare}){
     return (
         <div className="column">
             <GameRelevency />
             <GameCapabilities /> 
-            <ShareLink />  
+            <ShareLink setShare={setShare}/>  
         </div>
         
     )
