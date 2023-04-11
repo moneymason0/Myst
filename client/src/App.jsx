@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import GameDescription from './components/GameDescription'
 import Header from './components/Header'
 import ImageCarousel from './components/ImageCarousel'
 import GameMetaData from './components/GameMetaData';
 import ShareModal from './components/ShareModal';
+import EmbedModal from './components/EmbedModal';
+import ModalContext from './context/ModalContext';
 import "./styles/App.css"
 
 const images = [
@@ -17,14 +19,8 @@ const images = [
 
 function App() {
   //used to handle state of the Share modal
-  const [showShareModal, setShowShareModal] = useState(false);
-  const handleShareClick = () => {
-    setShowShareModal(true);
-  }
-  const handleCloseShareModal = () => {
-    setShowShareModal(false);
-  }
-
+  const {showShareModal, showEmbedModal} = useContext(ModalContext)
+  
   return (
     <div className="background">
       <div className="picture">
@@ -38,9 +34,10 @@ function App() {
               <GameDescription />
             </div>
             </div>
-            <GameMetaData setShare={handleShareClick}/>
+            <GameMetaData />
           </div>
-          {showShareModal && <ShareModal onClose={handleCloseShareModal} />}
+            {showShareModal && <ShareModal />}
+            {showEmbedModal && <EmbedModal />}
         </div>
       </div>
     </div>

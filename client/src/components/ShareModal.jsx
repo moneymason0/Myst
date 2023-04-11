@@ -1,13 +1,15 @@
-import React from "react";
+import React, {useContext} from "react";
+import ModalContext from "../context/ModalContext";
 import "/src/styles/ShareModal.css"
 
-function ShareModal({onClose}){
+function ShareModal(){
+    const {handleCloseShareModal} = useContext(ModalContext)
     return(
         <div className="smContainer">
         <div className="smTopBar"></div>
             <div className="smHeaderBoarder">
                 <div className="smHeader">
-                    <div className="smX" onClick={onClose}></div>
+                    <div className="smX" onClick={handleCloseShareModal}></div>
                     <div className="smText">Share</div>
                 </div>
             </div>
@@ -28,14 +30,13 @@ function ShareModal({onClose}){
                                 
                                 <div className="smLink">
                                     <label className="smLabel" hidden>Link to the game's store page</label>
-                                    <textArea className="smTextBox">https://store.steampowered.com/app/70/HalfLife/</textArea>
+                                    <textarea className="smTextBox" defaultValue="https://store.steampowered.com/app/70/HalfLife/"></textarea>
                                 </div>
                                 <div className="smResult"></div>
                             </div>
-                            
                         </div>
                         <div className="smFooter">
-                            <div className="smBtn" onClick={onClose}>
+                            <div className="smBtn" onClick={handleCloseShareModal}>
                                 <span className="smBtnLabel">OK</span>
                             </div>
                         </div>
@@ -44,6 +45,5 @@ function ShareModal({onClose}){
             </div>
         </div>   
     )
-
 }
 export default ShareModal;
