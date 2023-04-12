@@ -27,112 +27,61 @@ const sportsRacing = categories['Sports & Racing'];
 
 // parameters are the dropDownList inserted into the component, and the fn used
 // to handle the click on the drop down
-const DropDowns = ({ dropDownList, handleDropdownHover }) => {
-    // selected option is the variable set blank here,
-    // setSelectedOption is the fn that determines its value
-    const [selectedOption, setSelectedOption] = useState("");
-  
 
-    // the eventListener this fn will be attached to 
-    // will trigger the setSelectedOption fn
-    const handleChange = (event) => {
-      setSelectedOption(event.target.value);
-      handleDropdownHover(event);
-    };
-  
-  
-  
-  
-    const renderDropDownList = dropDownList.map((listItem, index) => (
-      <option key={index}>{listItem}</option>
-    ));
-  
+// lets filter for what items need to apply
+const DropDowns = ({ dropDownList }) => {
     return (
-      <>
-        <select onMouseEnter={handleDropdownHover} value={selectedOption} onChange={handleChange}>
-          {renderDropDownList}
-        </select>
-      </>
+      <div style={{ position: 'absolute', left: 0, top: '100%' }}>
+        <ul>
+          {dropDownList.map((listItem, index) => (
+            <option key={index}>{listItem}</option>
+          ))}
+        </ul>
+      </div>
     );
   };
-
+  
   const NavBarTextButtons = ({
     text,
-    showDropdown,
     listDisplayed,
-    id,
-    className,
-    dropdownTrigger = "hover",
   }) => {
     const [isOpen, setIsOpen] = useState(false);
   
     const handleMouseEnter = () => {
-      if (dropdownTrigger === "hover") {
-        setIsOpen(true);
-      }
+      setIsOpen(true);
     };
   
     const handleMouseLeave = () => {
-      if (dropdownTrigger === "hover") {
-        setIsOpen(false);
-      }
+      setIsOpen(false);
     };
-  
-  
   
     return (
       <div
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        style={{ position: "relative", display: "inline-block" }}
+        style={{ position: 'relative', display: 'inline-block' }}
       >
-        <a type="submit" id={id} className={className}>
-          {text}
-        </a>
-        {showDropdown && isOpen && (
-          <div style={{ position: "absolute", left: 0, top: "100%" }}>
-            <DropDowns dropDownList={listDisplayed} handleDropdownHover={handleDropdownHover} />
-          </div>
+        <option>{text}</option>
+        {isOpen && (
+          <DropDowns dropDownList={listDisplayed} />
         )}
       </div>
     );
   };
   
-
   function NavBar() {
+
+  
     return (
-      <div>
-        <div className="nav-bar-button-list">
-          <NavBarTextButtons
-            text="Your Store"
-            showDropdown={true}
-            listDisplayed={yourStore}
-          />
-            <NavBarTextButtons
-            text="New & NoteWorthy"
-            showDropdown={true}
-            listDisplayed={newAndNoteWorthy}
-          />
-            <NavBarTextButtons
-            text="Categories"
-            showDropdown={true}
-            listDisplayed={categories}
-          />
-            <NavBarTextButtons
-            text="Points Shop"
-          />
-            <NavBarTextButtons
-            text="News"
-          />
-            <NavBarTextButtons
-            text="Labs"
-          />
+      <div id='store-header'>
+        <div id="nav-bar-button-list">
+          <NavBarTextButtons text="Your Store" listDisplayed={yourStore} />
+          <NavBarTextButtons text="New & NoteWorthy" listDisplayed={newAndNoteWorthy} />
+          <NavBarTextButtons text="Categories" listDisplayed={categories['SPECIAL SECTIONS']} />    
         </div>
       </div>
     );
   }
-  
-  
 
 
 
