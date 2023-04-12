@@ -22,8 +22,8 @@ const images = [
 
 function App() {
   //used to handle state of the Share modal
-  const {showShareModal, showEmbedModal, showReportModal, showModal} = useContext(ModalContext)
-  
+  const { showShareModal, showEmbedModal, showReportModal, showModal } = useContext(ModalContext)
+
   return (
     <div className="background">
       <div className="picture">
@@ -36,14 +36,16 @@ function App() {
               <div className="game-description-wrapper">
                 <GameDescription />
               </div>
-              <LeftGameDescripColumn />
             </div>
-            <GameMetaData />
           </div>
-            {showShareModal && <ShareModal />}
-            {showEmbedModal && <EmbedModal />}
-            {showReportModal && <ReportModal />}
-            {showModal && <TagModal />}
+          <div className="page_content">
+            <GameMetaData />
+            <LeftGameDescripColumn />
+          </div>
+          {showShareModal && <ShareModal />}
+          {showEmbedModal && <EmbedModal />}
+          {showReportModal && <ReportModal />}
+          {showModal && <TagModal />}
         </div>
       </div>
     </div>
