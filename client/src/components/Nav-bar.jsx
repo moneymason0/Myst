@@ -71,6 +71,25 @@ const DropDowns = ({ dropDownList }) => {
     );
   };
   
+function SearchBar() {
+    const [searchInput, setSearchInput] =useState('')
+
+    const handleInputChange = (event) => {
+        setSearchInput(event.target.value);
+    }
+
+    const handleSearch = () => {
+        console.log('Search for',searchInput)
+    }
+
+return(<div>
+    <input type="text" value={searchInput}onChange={handleInputChange}placeholder="search" />
+        <button onClick={handleSearch}></button>
+   
+</div>)}
+
+
+
 //Remember, this is the component that is exported to app. The parameters for the creation of this 
 // component are listed above, and prescribed below
 
@@ -82,8 +101,12 @@ const DropDowns = ({ dropDownList }) => {
         <div className="nav-bar-button-list">
           <NavBarTextButtons text="Your Store" listDisplayed={yourStore} id='your-store' className="nav-bar-button-list"/>
           <NavBarTextButtons text="New & NoteWorthy" listDisplayed={newAndNoteWorthy} id='new-&-noteworthy' className='nav-bar-button-list'/>
-          <NavBarTextButtons text="Categories" listDisplayed={categories['SPECIAL SECTIONS']} id='categories' className='nav-bar-button-list' />    
+          <NavBarTextButtons text="Categories" listDisplayed={categories['SPECIAL SECTIONS']} id='categories' className='nav-bar-button-list' />
+          {/* <NavBarTextButtons text='Points Shop'/>
+          <NavBarTextButtons text= 'News'/>
+          <NavBarTextButtons text= 'Labs'/>     */}
         </div>
+        <SearchBar />
       </div>
     );
   }
