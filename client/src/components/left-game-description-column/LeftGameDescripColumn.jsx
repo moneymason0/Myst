@@ -12,7 +12,6 @@ import FranchiseHighlight from './FranchiseHighlight';
 function LeftGameDescripColumn() {
     return (
         <div>
-            Hello Left Side
             <div>
             <FranchiseHighlight />
             </div>
