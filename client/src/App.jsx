@@ -7,6 +7,8 @@ import ShareModal from './components/ShareModal';
 import EmbedModal from './components/EmbedModal';
 import ModalContext from './context/ModalContext';
 import "./styles/App.css"
+import ReportModal from './components/ReportModal';
+import TagModal from "./components/TagModal";
 
 const images = [
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002348.600x338.jpg?t=1666824272',
@@ -19,7 +21,7 @@ const images = [
 
 function App() {
   //used to handle state of the Share modal
-  const {showShareModal, showEmbedModal} = useContext(ModalContext)
+  const {showShareModal, showEmbedModal, showReportModal, showModal} = useContext(ModalContext)
   
   return (
     <div className="background">
@@ -38,6 +40,8 @@ function App() {
           </div>
             {showShareModal && <ShareModal />}
             {showEmbedModal && <EmbedModal />}
+            {showReportModal && <ReportModal />}
+            {showModal && <TagModal />}
         </div>
       </div>
     </div>
