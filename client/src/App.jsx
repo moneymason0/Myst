@@ -6,7 +6,8 @@ import GameMetaData from './components/GameMetaData';
 import ShareModal from './components/ShareModal';
 import EmbedModal from './components/EmbedModal';
 import ModalContext from './context/ModalContext';
-import LeftGameDescripColumn from './components/left-game-description-column/LeftGameDescripColumn';
+import LeftGameDescripColumn from './components/left-game-description-column/LeftGameDescripColumn'
+import Footer from './components/Footer';
 import "./styles/App.css"
 
 const images = [
@@ -40,6 +41,9 @@ function App() {
           </div>
           {showShareModal && <ShareModal />}
           {showEmbedModal && <EmbedModal />}
+        <div>
+          <Footer />
+        </div>
         </div>
       </div>
     </div>
