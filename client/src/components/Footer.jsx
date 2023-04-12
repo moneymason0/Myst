@@ -1,4 +1,5 @@
 import React from "react";
+import '/src/styles/Footer.css';
 
 
 function Footer() {
@@ -12,7 +13,7 @@ function Footer() {
         property of their respective owners in the US and other countries.
       </div>
       <div></div>
-      <div>VAT included in all prices where applicable.</div>
+      <div id="VAT">VAT included in all prices where applicable.</div>
       <div>
         <a href="">Privacy Policy</a>
         <a href="">Legal</a>
