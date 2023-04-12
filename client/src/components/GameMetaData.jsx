@@ -4,6 +4,7 @@ import GameCapabilities from "./GameCapabilities";
 import ShareLink from "./ShareLink";
 import SupportedLanguages from "./SupportedLanguages";
 import SteamDeck from "./SteamDeck";
+import MetaCritic from "./MetaCritic";
 import "/src/styles/GameMetaData.css"
 
 function GameMetaData(){
@@ -13,7 +14,8 @@ function GameMetaData(){
             <GameCapabilities /> 
             <SupportedLanguages />
             <SteamDeck />
-            <ShareLink />  
+            <ShareLink />
+            <MetaCritic />  
         </div>
         
     )
