@@ -7,7 +7,15 @@ import React, { useContext } from 'react';
 
 function GameDescriptionArea() {
     return (
-        <div>Game Description Area</div>
+        <div className='game_area_purchase_game' id='game_area_purchase_section_add_to_cart_34'>
+            <form name='add_to_cart_34' action='https://store.steampowered.com/cart/' method='POST'>
+                <input type='hidden' name='' value='' />
+                <input type='hidden' name='' value='' />
+                <input type='hidden' name='' value='' />
+                <input type='hidden' name='' value='' />
+                <input type='hidden' name='' value='' />
+            </form>
+        </div>
     )
 }
 

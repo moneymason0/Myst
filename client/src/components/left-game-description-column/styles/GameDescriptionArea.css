@@ -1,0 +1,10 @@
+.game_area_purchase_game_wrapper {
+    margin-bottom: 0px;
+}
+
+.game_area_purchase_game {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
