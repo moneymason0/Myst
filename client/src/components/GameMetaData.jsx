@@ -2,6 +2,7 @@ import React from "react";
 import GameRelevency from "./GameRelevency";
 import GameCapabilities from "./GameCapabilities";
 import ShareLink from "./ShareLink";
+import SupportedLanguages from "./SupportedLanguages";
 import "/src/styles/GameMetaData.css"
 
 function GameMetaData(){
@@ -9,6 +10,7 @@ function GameMetaData(){
         <div className="column">
             <GameRelevency />
             <GameCapabilities /> 
+            <SupportedLanguages />
             <ShareLink />  
         </div>
         

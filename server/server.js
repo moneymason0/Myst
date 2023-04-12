@@ -15,17 +15,24 @@ const pool = new Pool({
     database: 'mydb',
     password: 'password',
     port: 5432
-})
-app.get('/testing', async (req, res) => {
-    try {
-        const { rows } = await pool.query('SELECT * FROM test');
-        res.status(200).json(rows);
-    } catch (err) {
-        console.log(err);
-        res.status(500).json({ message: 'INTERNAL SERVER ERROR' });
-    }
 });
 
+app.get('/games/:gameId/languages', (req, res) => {
+    const gameId = req.params.gameId;
+    pool.query(
+        'SELECT language.name FROM language INNER JOIN game_language ON language.language_id = game_language.language_id INNER JOIN game ON game.game_id = game_language.game_id WHERE game.game_id = $1',
+        [gameId],
+        (err, result) => {
+            if (err) {
+                console.error(err);
+                res.status(500).send('Error retrieving languages for game');
+            } else {
+                const languageNames = result.rows.map(row => row.name);
+                res.json(languageNames);
+            }
+        }
+    );
+});
 
 app.listen(3000, () => {
     console.log('Server listening on port 3000')
