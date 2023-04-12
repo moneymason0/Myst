@@ -41,18 +41,13 @@ function App() {
             </div>
             <GameMetaData />
           </div>
-<<<<<<< HEAD
-          {showShareModal && <ShareModal />}
-          {showEmbedModal && <EmbedModal />}
-        <div>
-          <Footer />
-        </div>
-=======
             {showShareModal && <ShareModal />}
             {showEmbedModal && <EmbedModal />}
             {showReportModal && <ReportModal />}
             {showModal && <TagModal />}
->>>>>>> develop
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     </div>
