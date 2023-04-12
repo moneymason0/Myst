@@ -6,8 +6,11 @@ import GameMetaData from './components/GameMetaData';
 import ShareModal from './components/ShareModal';
 import EmbedModal from './components/EmbedModal';
 import ModalContext from './context/ModalContext';
+import LeftGameDescripColumn from './components/left-game-description-column/LeftGameDescripColumn';
 import "./styles/App.css"
-import NavBar from './components/Nav-bar';
+import ReportModal from './components/ReportModal';
+import TagModal from "./components/TagModal";
+import DropDowns from './components/Nav-bar';
 
 const images = [
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002348.600x338.jpg?t=1666824272',
@@ -20,7 +23,7 @@ const images = [
 
 function App() {
   //used to handle state of the Share modal
-  const {showShareModal, showEmbedModal} = useContext(ModalContext)
+  const {showShareModal, showEmbedModal, showReportModal, showModal} = useContext(ModalContext)
   
   return (
     <div className="background">
@@ -29,17 +32,20 @@ function App() {
         <div className="app">
         <NavBar />
           <div>
-            
+
             <div className="carousel-and-content">
               <ImageCarousel images={images} />
-            <div className="game-description-wrapper">
-              <GameDescription />
-            </div>
+              <div className="game-description-wrapper">
+                <GameDescription />
+              </div>
+              <LeftGameDescripColumn />
             </div>
             <GameMetaData />
           </div>
             {showShareModal && <ShareModal />}
             {showEmbedModal && <EmbedModal />}
+            {showReportModal && <ReportModal />}
+            {showModal && <TagModal />}
         </div>
       </div>
     </div>

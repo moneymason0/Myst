@@ -1,14 +1,15 @@
-import React,{useEffect, useState} from "react";
+import React,{useContext} from "react";
 import "/src/styles/GameDescriptionModal.css"
+import ModalContext from "../context/ModalContext";
 
-function TagModal({onClose}){
-
+function TagModal(){
+    const {handleCloseModal} = useContext(ModalContext)
     return(
         <div className="modal">
             <div className="modalTopBar"></div>
             <div className="modalHeaderBoarder">
                 <div className="modalHeader">
-                    <div onClick={onClose} className="modalCloseHead"></div>
+                    <div onClick={handleCloseModal} className="modalCloseHead"></div>
                     <div className="modalTopText">
                         VIEW AND EDIT TAGS FOR THIS PRODUCT
                     </div>                      
@@ -105,7 +106,7 @@ function TagModal({onClose}){
                         </div>
                     </div>
                     <div className="modalFooter">
-                        <div onClick={onClose} className="modalCloseFoot">
+                        <div onClick={handleCloseModal} className="modalCloseFoot">
                             <span className="modalFooterSpan">Close</span>
                         </div>
                     </div>
