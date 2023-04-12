@@ -44,6 +44,8 @@ const DropDowns = ({ dropDownList }) => {
   const NavBarTextButtons = ({
     text,
     listDisplayed,
+    id,
+    className,
   }) => {
     const [isOpen, setIsOpen] = useState(false);
   
@@ -69,15 +71,18 @@ const DropDowns = ({ dropDownList }) => {
     );
   };
   
+//Remember, this is the component that is exported to app. The parameters for the creation of this 
+// component are listed above, and prescribed below
+
   function NavBar() {
 
   
     return (
       <div id='store-header'>
-        <div id="nav-bar-button-list">
-          <NavBarTextButtons text="Your Store" listDisplayed={yourStore} />
-          <NavBarTextButtons text="New & NoteWorthy" listDisplayed={newAndNoteWorthy} />
-          <NavBarTextButtons text="Categories" listDisplayed={categories['SPECIAL SECTIONS']} />    
+        <div className="nav-bar-button-list">
+          <NavBarTextButtons text="Your Store" listDisplayed={yourStore} id='your-store' className="nav-bar-button-list"/>
+          <NavBarTextButtons text="New & NoteWorthy" listDisplayed={newAndNoteWorthy} id='new-&-noteworthy' className='nav-bar-button-list'/>
+          <NavBarTextButtons text="Categories" listDisplayed={categories['SPECIAL SECTIONS']} id='categories' className='nav-bar-button-list' />    
         </div>
       </div>
     );

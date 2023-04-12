@@ -1,3 +1,9 @@
-#nav-bar-button-list{
+.nav-bar-button-list{
     background-color: #3b6491;
+    color: #e5e5e5;
+}
+
+#your-store{
+    background-color: crimson;
+    color: aquamarine;
 }
