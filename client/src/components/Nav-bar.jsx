@@ -41,37 +41,7 @@ const DropDowns = ({ dropDownList }) => {
     );
   };
   
-  const NavBarTextButtons = ({
-    text,
-    listDisplayed,
-    id,
-    className,
-  }) => {
-    const [isOpen, setIsOpen] = useState(false);
-  
-    const handleMouseEnter = () => {
-      setIsOpen(true);
-    };
-  
-    const handleMouseLeave = () => {
-      setIsOpen(false);
-    };
-  
-    return (
-      <div
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        style={{ position: 'relative', display: 'inline-block' }}
-      >
-        <option>{text}</option>
-        {isOpen && (
-          <DropDowns dropDownList={listDisplayed} />
-        )}
-      </div>
-    );
-  };
-  
-function SearchBar() {
+  function SearchBar() {
     const [searchInput, setSearchInput] =useState('')
 
     const handleInputChange = (event) => {
@@ -90,6 +60,40 @@ return(<div>
 
 
 
+  const NavBarTextButtons = ({
+    text,
+    listDisplayed,
+    id,
+    className,
+  }) => {
+    const [isOpen, setIsOpen] = useState(false);
+  
+    //this is the function that will be executed according to onMouseEnter event listener
+    const handleMouseEnter = () => {
+      setIsOpen(true);
+    };
+  
+    const handleMouseLeave = () => {
+      setIsOpen(false);
+    };
+  
+    return (
+      <div
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{ position: 'relative', display: 'inline-block',background:'red' }}
+      >
+        <option>{text}</option>
+        {isOpen && (
+          <DropDowns dropDownList={listDisplayed} />
+        )}
+      </div>
+    );
+  };
+  
+
+
+
 //Remember, this is the component that is exported to app. The parameters for the creation of this 
 // component are listed above, and prescribed below
 
@@ -98,10 +102,10 @@ return(<div>
   
     return (
       <div id='store-header'>
-        <div className="nav-bar-button-list">
-          <NavBarTextButtons text="Your Store" listDisplayed={yourStore} id='your-store' className="nav-bar-button-list"/>
-          <NavBarTextButtons text="New & NoteWorthy" listDisplayed={newAndNoteWorthy} id='new-&-noteworthy' className='nav-bar-button-list'/>
-          <NavBarTextButtons text="Categories" listDisplayed={categories['SPECIAL SECTIONS']} id='categories' className='nav-bar-button-list' />
+        <div id="nav-bar-button-list">
+          <NavBarTextButtons text="Your Store " listDisplayed={yourStore} id="your-store" className="nav-bar-button-list"/>
+          <NavBarTextButtons text=" New & NoteWorthy" listDisplayed={newAndNoteWorthy} id='new-&-noteworthy' className='nav-bar-button-list'/>
+          <NavBarTextButtons text=" Categories " listDisplayed={categories['SPECIAL SECTIONS']} id='categories' className='nav-bar-button-list' />
           {/* <NavBarTextButtons text='Points Shop'/>
           <NavBarTextButtons text= 'News'/>
           <NavBarTextButtons text= 'Labs'/>     */}

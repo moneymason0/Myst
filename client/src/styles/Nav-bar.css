@@ -1,13 +1,6 @@
-.nav-bar-button-list{
-    background-color: #3b6491;
-    color: #e5e5e5;
+#your-store *{
+   background-color: chartreuse;
+   font-family: 'Courier New', Courier, monospace; 
+   left: 400px;
 }
 
-#your-store{
-    background-color: crimson;
-    color: aquamarine;
-}
-
-.SearchBar{
-    background: #c42d2d;
-}

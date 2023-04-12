@@ -29,8 +29,9 @@ function App() {
     <div className="background">
       <div className="picture">
         <Header />
-        <div className="app">
         <NavBar />
+        <div className="app">
+        
           <div>
 
             <div className="carousel-and-content">
