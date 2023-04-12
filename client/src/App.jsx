@@ -10,6 +10,7 @@ import LeftGameDescripColumn from './components/left-game-description-column/Lef
 import "./styles/App.css"
 import ReportModal from './components/ReportModal';
 import TagModal from "./components/TagModal";
+import DropDowns from './components/Nav-bar';
 
 const images = [
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002348.600x338.jpg?t=1666824272',
