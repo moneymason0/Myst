@@ -1,17 +1,9 @@
-import React, {useState, useEffect} from "react";
+import React, {useContext} from "react";
 import "/src/styles/GameDescription.css"
-import TagModal from "./TagModal";
+import ModalContext from "../context/ModalContext";
 
 function UserDefinedTags(){
-    const [showModal, setShowModal] = useState(false);
-
-    const handleClick = () => {
-        setShowModal(true);
-    }
-
-    const handleCloseModal = () => {
-        setShowModal(false);
-    }
+    const {showModal, handleClick} = useContext(ModalContext)
 
     return(
         <div>
@@ -36,7 +28,7 @@ function UserDefinedTags(){
             <div onClick={handleClick}className="tagBtn">
                 +
             </div>
-            {showModal && <TagModal onClose={handleCloseModal} />}
+            
         </div>
     )
 }

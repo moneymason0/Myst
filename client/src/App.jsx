@@ -9,6 +9,8 @@ import ModalContext from './context/ModalContext';
 import LeftGameDescripColumn from './components/left-game-description-column/LeftGameDescripColumn'
 import Footer from './components/Footer';
 import "./styles/App.css"
+import ReportModal from './components/ReportModal';
+import TagModal from "./components/TagModal";
 
 const images = [
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002348.600x338.jpg?t=1666824272',
@@ -21,8 +23,8 @@ const images = [
 
 function App() {
   //used to handle state of the Share modal
-  const { showShareModal, showEmbedModal } = useContext(ModalContext)
-
+  const {showShareModal, showEmbedModal, showReportModal, showModal} = useContext(ModalContext)
+  
   return (
     <div className="background">
       <div className="picture">
@@ -39,11 +41,18 @@ function App() {
             </div>
             <GameMetaData />
           </div>
+<<<<<<< HEAD
           {showShareModal && <ShareModal />}
           {showEmbedModal && <EmbedModal />}
         <div>
           <Footer />
         </div>
+=======
+            {showShareModal && <ShareModal />}
+            {showEmbedModal && <EmbedModal />}
+            {showReportModal && <ReportModal />}
+            {showModal && <TagModal />}
+>>>>>>> develop
         </div>
       </div>
     </div>
