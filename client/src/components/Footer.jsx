@@ -7,17 +7,20 @@ function Footer() {
     <>
       <div id="background">
         <hr></hr>
-        <p id="rights">
-          © 2023 Valve Corporation. All rights reserved. All trademarks are
-          property of their respective owners in the US and other countries.
-        </p>
+        <div>
+          <img className="pic" src={pic}></img>
+          <p id="rights">
+            © 2023 Valve Corporation. All rights reserved. All trademarks are
+            property of their respective owners in the US and other countries.
+          </p>
+        </div>
         <div>
           <div>
-            <p id="VAT">
+            <p className="VAT">
               {" "}
               VAT included in all prices where applicable.
               <a href="" id="privacy">
-                &nbsp;Privacy Policy{" "}
+                &nbsp; &nbsp;Privacy Policy{" "}
               </a>
               &nbsp;
               <> | </>&nbsp;
@@ -44,42 +47,24 @@ function Footer() {
           </div>
         </div>
         <hr id="bottom-line"></hr>
-        <div>
-          <a id="about" href="">
-            About Valve
-          </a>{" "}
+        <div className="about">
+          <a href="">About Valve</a>
           <> | </>
-          <a id="about" href="">
-            Jobs
-          </a>{" "}
+          <a href="">Jobs</a>
           <> | </>
-          <a id="about" href="">
-            Steamworks
-          </a>{" "}
+          <a href="">Steamworks</a>
           <> | </>
-          <a id="about" href="">
-            Steam distribution
-          </a>{" "}
+          <a href="">Steam distribution</a>
           <> | </>
-          <a id="about" href="">
-            Support
-          </a>{" "}
+          <a href="">Support</a>
           <> | </>
-          <a id="about" href="">
-            Recycling
-          </a>{" "}
+          <a href="">Recycling</a>
           <> | </>
-          <a id="about" href="">
-            Gift Cards
-          </a>{" "}
+          <a href="">Gift Cards</a>
           <> | </>
-          <a id="about" href="">
-            FaceBewk
-          </a>{" "}
+          <a href="">FaceBewk</a>
           <> | </>
-          <a id="about" href="">
-            Twizzer
-          </a>{" "}
+          <a href="">Twizzer</a>
         </div>
         <div />
       </div>
