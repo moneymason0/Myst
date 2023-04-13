@@ -34,6 +34,25 @@ app.get('/games/:gameId/languages', (req, res) => {
     );
 });
 
+
+app.get('/games/:gameId/gameInfo', async (req, res) => {
+    const gameId = req.params.gameId;
+    pool.query('SELECT * FROM game WHERE game_id = $1', [gameId])
+        .then(result => {
+            if (result.rows.length === 0) {
+                res.status(404).send('Game not found');
+            } else {
+                const gameInfo = result.rows[0];
+                res.send(gameInfo);
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            res.status(500).send('Internal server error');
+        });
+});
+
+
 app.listen(3000, () => {
     console.log('Server listening on port 3000')
 })

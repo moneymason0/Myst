@@ -1,0 +1,127 @@
+.game_area_purchase_game_wrapper .game_area_purchase_game {
+    margin-bottom: 0px;
+    width: 600px;
+    background: linear-gradient( -60deg, rgba(226,244,255,0.3) 5%,rgba(84, 107, 115, 0.3) 95%);
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.game_area_purchase_game_wrapper .game_area_purchase_game p {
+    margin-bottom: 8px;
+}
+
+.game_area_purchase_game {
+    position: relative;
+    padding: 0px;
+    margin: 0;
+    display: block;
+}
+
+.game_purchase_price {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn_green_steamui {
+    color: white;
+}
+
+.game_area_purchase_game_wrapper.bundle .bundleTag,
+.game_area_purchase_game.bundle .bundleTag {
+	color: #a4d7f5;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 15px;
+	margin-left: 3px;
+    
+}
+.game_area_purchase_game_wrapper.bundle .bundleTag .bundleHelper,
+.game_area_purchase_game.bundle .bundleTag .bundleHelper{
+	color: #838383;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.game_area_purchase_game_wrapper.bundle .game_area_purchase_game b {
+	color: #a4d7f5;
+}
+
+.game_area_purchase_game .game_area_purchase_platform {
+	float: right;
+}
+
+.game_area_purchase_game h1,
+.game_area_offsite_purchase h1 {
+	font-size: 21px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			color: #ffffff;
+    font-weight: normal;
+}
+
+.game_area_purchase_game b,
+.game_area_offsite_purchase b {
+	font-weight: normal;
+	color: #8bc53f;
+}
+
+.game_area_purchase_game p.package_contents,
+.game_area_offsite_purchase p.package_contents{
+	color: #8f98a0;
+}
+
+.game_area_purchase_game p.package_contents a,
+.game_area_offsite_purchase p.package_contents a {
+	color: #b0aeac;
+}
+
+/* .game_purchase_action {
+	height: 40px;
+} */
+
+.game_area_purchase_game .game_purchase_action,
+.game_area_comingsoon .game_purchase_action,
+.game_area_offsite_purchase .game_purchase_action {
+	position: absolute;
+
+	right: 16px;
+	bottom: -17px;
+	left: 16px;
+/*	overflow-x: auto; */
+	white-space: nowrap;
+	text-align: right;
+}
+
+.game_purchase_action_bg {
+	height: 32px;
+	vertical-align: bottom;
+	display: inline-block;
+	/* background-color: rgba(0,0,0,0.5); */
+	background-color: #000000;
+	padding: 2px 2px 2px 0px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	white-space: nowrap;
+	font-size: 0;
+}
+
+.game_purchase_action_bg > * {
+	font-size: 12px;
+	display: inline-block;
+	margin-left: 2px;
+	vertical-align: middle;
+}
+.game_purchase_action_bg > .discount_pct {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    font-size: 25px;
+    text-align: center;
+    overflow: hidden;
+    padding: 0 6px;
+}
+.game_purchase_action_bg > .discount_prices {
+    margin: 0 8px;
+}
