@@ -25,7 +25,7 @@ function NavBarBM (){
                                 </div>
                                 <div className="tab">
                                     <span className="navSpan" onMouseEnter={handleNewAndNoteWorthyMouseOver}>
-                                        <a className="navATag" href=''>New & Noteworthy</a>
+                                        <a className="navATag" >New & Noteworthy</a>
                                         <span></span>
                                     </span>
                                 </div>
