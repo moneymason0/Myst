@@ -1,4 +1,4 @@
-.game_area_purchase_game_wrapper .game_area_purchase_game {
+.game_area_purchase_game_wrapper {
     margin-bottom: 0px;
     width: 600px;
     background: linear-gradient( -60deg, rgba(226,244,255,0.3) 5%,rgba(84, 107, 115, 0.3) 95%);
@@ -6,14 +6,15 @@
     margin-top: 16px;
 }
 
-.game_area_purchase_game_wrapper .game_area_purchase_game p {
+.game_area_purchase_game p {
     margin-bottom: 8px;
+	display: block;
 }
 
 .game_area_purchase_game {
     position: relative;
     padding: 0px;
-    margin: 0;
+    margin: 16px;
     display: block;
 }
 
