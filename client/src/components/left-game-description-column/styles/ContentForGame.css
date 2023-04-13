@@ -1,0 +1,15 @@
+.game_area_dlc_section {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 0px;
+    margin: 0px;
+}
+
+div {
+    display: block;
+}
+
+.browse_tag {
+    border: 1px solid white;
+    padding: 5px;
+}
