@@ -14,7 +14,7 @@ export const GameDataContextProvider = ({children}) =>{
     }, []);
 
     return(
-        <GameDataContext.Provider value={{children}}>
+        <GameDataContext.Provider value={{gameData}}>
             {children}
         </GameDataContext.Provider>
     )
