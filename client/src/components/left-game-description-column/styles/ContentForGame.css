@@ -1,0 +1,61 @@
+.game_area_dlc_section {
+    padding: 20px;
+    border-radius: 4px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gradientbg {
+    background-image: linear-gradient(to right, #6b7c93 0%, #253746 100%);
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0;
+  }
+  
+  .note {
+    margin-left: 10px;
+    font-size: 0.9em;
+  }
+  
+  .browse_tag {
+    color: #1a73e8;
+    text-decoration: none;
+  }
+  
+  .browse_tag em {
+    margin-left: 5px;
+    font-style: normal;
+  }
+  
+  .game_area_dlc_list {
+    margin-top: 20px;
+  }
+  
+  .game_area_dlc_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #222;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .game_area_dlc_row:hover {
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .game_area_dlc_name {
+    flex-grow: 1;
+  }
+  
+  .game_area_dlc_price {
+    font-weight: bold;
+  }

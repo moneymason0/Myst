@@ -6,10 +6,15 @@ import GameMetaData from './components/GameMetaData';
 import ShareModal from './components/ShareModal';
 import EmbedModal from './components/EmbedModal';
 import ModalContext from './context/ModalContext';
-import LeftGameDescripColumn from './components/left-game-description-column/LeftGameDescripColumn';
+import LeftGameDescripColumn from './components/left-game-description-column/LeftGameDescripColumn'
+import Footer from './components/Footer';
 import "./styles/App.css"
 import ReportModal from './components/ReportModal';
 import TagModal from "./components/TagModal";
+// import NavBar from './components/Nav-bar';
+import NavBarBM from './components/NavBarBM';
+import YourStoreModal from './components/YourStoreModal';
+import NewAndNoteWorthy from './components/NewAndNoteworthy';
 
 const images = [
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002348.600x338.jpg?t=1666824272',
@@ -22,15 +27,24 @@ const images = [
 
 function App() {
   //used to handle state of the Share modal
-  const { showShareModal, showEmbedModal, showReportModal, showModal } = useContext(ModalContext)
+  const { showShareModal, showEmbedModal, showReportModal, showModal, showYourStore, showNewAndNoteWorthy} = useContext(ModalContext)
 
   return (
+  <>  
     <div className="background">
+     
+      <div>
+       
+      </div>
+      
       <div className="picture">
-        <Header />
+         <Header />
+          <NavBarBM />
+        
         <div className="app">
+        
           <div>
-
+           
             <div className="carousel-and-content">
               <ImageCarousel images={images} />
               <div className="game-description-wrapper">
@@ -46,9 +60,15 @@ function App() {
           {showEmbedModal && <EmbedModal />}
           {showReportModal && <ReportModal />}
           {showModal && <TagModal />}
+          {showYourStore && <YourStoreModal />}
+          {showNewAndNoteWorthy && <NewAndNoteWorthy />}
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     </div>
+  </>
   );
 }
 

@@ -71,6 +71,8 @@ const DropDowns = ({ dropDownList, handleDropdownClick }) => {
   );
 };
 
+
+
 const HeaderTextButtons = ({
   text,
   showDropdown,
@@ -128,7 +130,7 @@ function Header() {
       <div className="content">
         <div class="logo">
           <div id="logo">
-            <img
+            <img className="logos"
               src="https://cdn.discordapp.com/attachments/1093286027059282142/1095097436701200546/MYST-gray-brown-logo-small.png"
               alt="Steam Logo"
             />{" "}

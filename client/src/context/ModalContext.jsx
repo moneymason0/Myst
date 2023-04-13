@@ -7,6 +7,9 @@ export const ModalProvider = ({children}) => {
     const [showEmbedModal, setShowEmbedModal] = useState(false);
     const [showReportModal, setShowReportModal] = useState(false);
     const [showModal, setShowModal] = useState(false);
+    const [showCat, setShowCat] = useState(false);
+    const [showYourStore, setShowYourStore] = useState(false);
+    const [showNewAndNoteWorthy, setShowNewAndNoteWorthy] = useState(false)
 
     const handleShareClick = () => {
         setShowShareModal(true);
@@ -33,6 +36,26 @@ export const ModalProvider = ({children}) => {
     const handleCloseModal = () => {
         setShowModal(false);
     }
+    const handleCatMouseOver = () => {
+        setShowCat(true)
+    }
+    const handleCatMouseExit = () =>{
+        setShowCat(false);
+    }
+    const handleYourStoreMouseOver = () => {
+        setShowYourStore(true)
+    }
+    const handleYourStoreMouseExit = () =>{
+        setShowYourStore(false);
+    }
+
+    const handleNewAndNoteWorthyMouseOver = () =>{
+        setShowNewAndNoteWorthy(true)
+    }
+
+    const handleNewAndNoteWorthyMouseExit = () =>{
+        setShowNewAndNoteWorthy(false)
+    }
 
     return( <ModalContext.Provider value={{
         showShareModal,
@@ -46,10 +69,21 @@ export const ModalProvider = ({children}) => {
         handleCloseReportModal,
         showModal,
         handleClick,
-        handleCloseModal
+        handleCloseModal,
+        showCat,
+        handleCatMouseOver,
+        handleCatMouseExit,
+        handleYourStoreMouseOver,
+        handleYourStoreMouseExit,
+        showYourStore,
+        showNewAndNoteWorthy,
+        handleNewAndNoteWorthyMouseOver,
+        handleNewAndNoteWorthyMouseExit
+
     }}>
         {children}
     </ModalContext.Provider>
     )
 }
 export default ModalContext
+
