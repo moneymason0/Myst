@@ -1,5 +1,5 @@
 import React from "react";
-import pic from "/src/assets/valve.png";
+import picz from "/src/assets/valve.png";
 import "/src/styles/Footer.css";
 
 function Footer() {
@@ -8,7 +8,7 @@ function Footer() {
       <div id="background">
         <hr></hr>
         <div>
-          <img className="pic" src={pic}></img>
+          <img className="pic" src={picz}></img>
           <p id="rights">
             © 2023 Valve Corporation. All rights reserved. All trademarks are
             property of their respective owners in the US and other countries.

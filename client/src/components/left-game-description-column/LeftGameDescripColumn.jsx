@@ -7,7 +7,7 @@ import FranchiseHighlight from './FranchiseHighlight';
 // import MoreFromHalfLife from './MoreFromHalfLife';
 // import MoreLikeThis from './MoreLikeThis';
 // import SystemRequirements from './SystemRequirements';
-// import WhatCuratorsSay from './WhatCuratorsSay';
+import WhatCuratorsSay from './WhatCuratorsSay';
 import './styles/GameDescriptionArea.css'
 
 function LeftGameDescripColumn() {
@@ -17,6 +17,7 @@ function LeftGameDescripColumn() {
             <div className='game_area_purchase_game_wrapper'>
                 <div className='game_area_purchase_game'>
                     <GameDescriptionArea />
+                    <WhatCuratorsSay />
                 </div>
             </div>
             {/* <ContentForThisGame />
@@ -24,8 +25,7 @@ function LeftGameDescripColumn() {
                     <SystemRequirements />
                     <CommunityMods />
                     <MoreFromHalfLife />
-                    <MoreLikeThis />
-                    <WhatCuratorsSay /> */}
+                <MoreLikeThis /> */}
         </div>
     )
 }
