@@ -6,7 +6,7 @@ export const GameDataContextProvider = ({children}) =>{
     const [gameData, setGameData] = useState([]);
 
     useEffect(() =>{
-        fetch('http://localhost:3000/games/1/')
+        fetch('http://localhost:3000/games/1/gameInfo')
             .then(response => response.json())
             .then(data => setGameData(data))
             .catch(error => console.log(error))
