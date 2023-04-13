@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Nav-bar.css";
+import '../context/ModalContext'
 
 const yourStore= ['Home','Community Reccomendations','Recently Viewed','Steam Curators']
 const newAndNoteWorthy= ['Steam replay 2022', 'Top Sellers','Most Played','New & Trending', 'Special Offers', 'Recently Updated','Popular Incoming']
@@ -11,6 +12,7 @@ const categories= {'SPECIAL SECTIONS':['Free to play','Demos','Early Access','Co
 'Simulation':['Building & Animation','Dating','Farming & Crafting','Hobby & Job','Life & Immersive','Sandbox & Physics','Space & Flight'],
 'Strategy':['Card & Board','City & Settlement','Grand & 4X','Military','Real-Time Strategy','Tower Defense','Turn-Based Strategy'],
 'Sports & Racing':['All Sports', 'Fishing & Hunting','Individual Sports','Racing','Racing Sim','Sports Sim','Team Sports',]}
+
 const themes= ['Anime','Horror','Mystery & Detective','Open World','Sci-Fi & Cyberpunk','Space','Survival']
 const playerSupport = ['Co-Operative','LAN','Local & Party','MMO','Multiplayer','Online Competitive','Singleplayer']
 // these are sub categories- go the Genre tab divided by genre so they can be separated as their own elements and distributed appropriately
@@ -34,7 +36,7 @@ const DropDowns = ({ dropDownList }) => {
       <div style={{ position: 'absolute', left: 0, top: '100%' }}>
         <ul>
           {dropDownList.map((listItem, index) => (
-            <option key={index}>{listItem}</option>
+            <div key={index} className='dropdown-item'>{listItem}</div>
           ))}
         </ul>
       </div>
@@ -57,6 +59,36 @@ return(<div>
         <button onClick={handleSearch}></button>
    
 </div>)}
+
+// const CategoriesButton = ({ categories }) => {
+//   return (
+//     <div>
+//       {Object.keys(categories).map((categoryKey, index) => (
+//         <div key={index}>
+//           <h3>{categoryKey}</h3>
+//           <ul>
+//             {Array.isArray(categories[categoryKey])
+//               ? categories[categoryKey].map((item, itemIndex) => (
+//                   <li key={itemIndex}>{item}</li>
+//                 ))
+//               : categories[categoryKey].map((genreObj) =>
+//                   Object.keys(genreObj).map((genreKey) => (
+//                     <div key={genreKey}>
+//                       <h4>{genreKey}</h4>
+//                       <ul>
+//                         {genreObj[genreKey].map((item, itemIndex) => (
+//                           <li key={itemIndex}>{item}</li>
+//                         ))}
+//                       </ul>
+//                     </div>
+//                   ))
+//                 )}
+//           </ul>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
 
 
   const NavBarTextButtons = ({
