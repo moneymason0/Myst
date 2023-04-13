@@ -59,7 +59,6 @@ return(<div>
 </div>)}
 
 
-
   const NavBarTextButtons = ({
     text,
     listDisplayed,
