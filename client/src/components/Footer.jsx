@@ -1,38 +1,88 @@
 import React from "react";
-import '/src/styles/Footer.css';
-
+import pic from "/src/assets/valve.png";
+import "/src/styles/Footer.css";
 
 function Footer() {
   return (
     <>
-      <div>
+      <div id="background">
         <hr></hr>
+        <p id="rights">
+          © 2023 Valve Corporation. All rights reserved. All trademarks are
+          property of their respective owners in the US and other countries.
+        </p>
+        <div>
+          <div>
+            <p id="VAT">
+              {" "}
+              VAT included in all prices where applicable.
+              <a href="" id="privacy">
+                &nbsp;Privacy Policy{" "}
+              </a>
+              &nbsp;
+              <> | </>&nbsp;
+              <a href="" id="privacy">
+                &nbsp;Legal
+              </a>
+              &nbsp;
+              <> | </>&nbsp;
+              <a href="" id="privacy">
+                &nbsp;Steam Subscriber Agreement
+              </a>
+              &nbsp;
+              <> | </>&nbsp;
+              <a href="" id="privacy">
+                Refunds
+              </a>
+              &nbsp;
+              <> | </>&nbsp;
+              <a href="" id="privacy">
+                Cookies
+              </a>
+              &nbsp;
+            </p>
+          </div>
+        </div>
+        <hr id="bottom-line"></hr>
+        <div>
+          <a id="about" href="">
+            About Valve
+          </a>{" "}
+          <> | </>
+          <a id="about" href="">
+            Jobs
+          </a>{" "}
+          <> | </>
+          <a id="about" href="">
+            Steamworks
+          </a>{" "}
+          <> | </>
+          <a id="about" href="">
+            Steam distribution
+          </a>{" "}
+          <> | </>
+          <a id="about" href="">
+            Support
+          </a>{" "}
+          <> | </>
+          <a id="about" href="">
+            Recycling
+          </a>{" "}
+          <> | </>
+          <a id="about" href="">
+            Gift Cards
+          </a>{" "}
+          <> | </>
+          <a id="about" href="">
+            FaceBewk
+          </a>{" "}
+          <> | </>
+          <a id="about" href="">
+            Twizzer
+          </a>{" "}
+        </div>
+        <div />
       </div>
-      <div>
-        © 2023 Valve Corporation. All rights reserved. All trademarks are
-        property of their respective owners in the US and other countries.
-      </div>
-      <div></div>
-      <div id="VAT">VAT included in all prices where applicable.</div>
-      <div>
-        <a href="">Privacy Policy</a>
-        <a href="">Legal</a>
-        <a href="">Steam Subscriber Agreement</a>
-        <a href="">Refunds</a>
-        <a href="">Cookies</a>
-      <div>
-        <hr></hr>
-      </div>
-      </div>
-      <a href="">About Valve</a>
-      <a href="">Jobs</a>
-      <a href="">Steamworks</a>
-      <a href="">Steam distribution</a>
-      <a href="">Support</a>
-      <a href="">Recycling</a>
-      <a href="">Gift Cards</a>
-      <a href="">FaceBewk</a>
-      <a href="">Twizzer</a>
     </>
   );
 }

@@ -1,0 +1,45 @@
+div {
+    text-align: center;
+}
+
+hr {
+    border-width: .15px;
+    padding-inline-end: 10px;
+}
+
+#rights {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #8f98a0;
+}
+
+#VAT {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #8f98a0;
+}
+
+#background {
+    background-color: #171a21;
+    padding: 16px 0px 60px 0;
+    size: 973px x 183px;
+}
+
+#about {
+    font-size: 13px;
+    color: #C6D4DF;
+    font-family: Motiva Sans, Sans-serif;
+    padding: 8px;
+
+}
+
+#privacy {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #C6D4DF;
+}
+
+#bottom-line {
+    border-width: .25px;
+    padding-inline-end: 1px;
+}
