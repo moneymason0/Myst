@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-// import BuyHalfLife from './BuyHalfLife';
+import BuyHalfLife from './BuyHalfLife';
 // import ContentForGame from './ContentForGame';
 // import PurchaseBundle1 from './PurchaseBundle1';
 // import PurchaseBundle2 from './PurchaseBundle2';
@@ -7,7 +7,11 @@ import React, { useContext } from 'react';
 
 function GameDescriptionArea() {
     return (
-        <div>Game Description Area</div>
+            <BuyHalfLife />
+            // <PurchaseBundle1 />
+            // <PurchaseBundle2 />
+            // <PurchaseBundle3 />
+            // <ContentForGame />
     )
 }
 
