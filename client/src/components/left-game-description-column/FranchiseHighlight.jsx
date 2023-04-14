@@ -13,6 +13,9 @@ function FranchiseHighlight() {
     };
 
     const backgroundImageStyle = {
+        width: "120%",
+        height: "105%",
+        justifyContent: "center center",
         backgroundImage:
             "url('https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/33078398/4762deceb71043238f877995e02f33206af3ae4e.jpg')",
     };
@@ -39,11 +42,11 @@ function FranchiseHighlight() {
     };
 
     return (
+        <div>
             <a
                 className="franchise_notice"
                 href="https://store.steampowered.com/franchise/Half-Life?snr=1_5_9__2001"
             >
-                <div className="background_image" style={backgroundImageStyle}></div>
                 <div className="zoom-image" style={zoomImageStyle}>
                     <div className="background_image" style={backgroundImageStyle}></div>
                     <div style={overlayStyle}></div>
@@ -53,6 +56,7 @@ function FranchiseHighlight() {
                 </div>
                 <div className="franchise_highlight"></div>
             </a>
+        </div>
     );
 }
 
