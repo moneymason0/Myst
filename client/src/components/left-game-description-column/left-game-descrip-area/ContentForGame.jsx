@@ -3,7 +3,7 @@ import '../styles/ContentForGame.css'
 
 function ContentForGame() {
     return (
-        <><div className="game_area_dlc_section">
+        <div className="game_area_dlc_section">
             <h2 className='gradientbg'>Content For This Game
                 <span className='note'>
                     <a className="browse_tag">
@@ -27,7 +27,7 @@ function ContentForGame() {
                     <div className='clear_right'></div>
                 </form>
             </div>
-        </div></>
+        </div>
     )
 }
 
