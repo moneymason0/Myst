@@ -15,6 +15,7 @@ import TagModal from "./components/TagModal";
 import NavBarBM from './components/NavBarBM';
 import YourStoreModal from './components/YourStoreModal';
 import NewAndNoteWorthy from './components/NewAndNoteworthy';
+import Categories from './components/categories';
 
 const images = [
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002348.600x338.jpg?t=1666824272',
@@ -27,7 +28,7 @@ const images = [
 
 function App() {
   //used to handle state of the Share modal
-  const { showShareModal, showEmbedModal, showReportModal, showModal, showYourStore, showNewAndNoteWorthy} = useContext(ModalContext)
+  const { showShareModal, showEmbedModal, showReportModal, showModal, showYourStore, showNewAndNoteWorthy, showCategories} = useContext(ModalContext)
 
   return (
   <>  
@@ -62,6 +63,7 @@ function App() {
           {showModal && <TagModal />}
           {showYourStore && <YourStoreModal />}
           {showNewAndNoteWorthy && <NewAndNoteWorthy />}
+          {showCategories && <Categories/>}
         </div>
         <div>
           <Footer />

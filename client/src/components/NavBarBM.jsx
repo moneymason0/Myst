@@ -1,12 +1,17 @@
 import React, {useContext} from "react";
 import "../styles/NavBarBM.css";
 import ModalContext from "../context/ModalContext";
+import { Modal } from "react-bootstrap";
 
 
 
 function NavBarBM (){
     const {handleYourStoreMouseOver} = useContext(ModalContext);
     const {handleNewAndNoteWorthyMouseOver} = useContext(ModalContext)
+    const {handleCategoriesMouseOver} = useContext(ModalContext)
+    const {handleYourStoreMouseExit} = useContext(ModalContext)
+    const {handleNewAndNoteWorthyMouseExit} = useContext(ModalContext)
+    const {handleCategoriesMouseExit} = useContext(ModalContext)
     return(
         <div className="headerContainer">
             <div className="headerSubContainer">
@@ -19,19 +24,19 @@ function NavBarBM (){
                             <div className="storeNav">
                                 <div className="tab">
                                     <span className="navSpan" onMouseEnter={handleYourStoreMouseOver}>
-                                        <a className="navATag" href="https://store.steampowered.com/">Your Store</a>
+                                        <a className="navATag" onMouseLeave={handleYourStoreMouseExit} href="https://store.steampowered.com/">Your Store</a>
                                         <span></span>
                                     </span>
                                 </div>
                                 <div className="tab">
                                     <span className="navSpan" onMouseEnter={handleNewAndNoteWorthyMouseOver}>
-                                        <a className="navATag" >New & Noteworthy</a>
+                                        <a className="navATag" onMouseLeave={handleNewAndNoteWorthyMouseExit} >New & Noteworthy</a>
                                         <span></span>
                                     </span>
                                 </div>
                                 <div className="tab">
-                                    <span className="navSpan">
-                                        <a className="navATag">Categories</a>
+                                    <span className="navSpan" onMouseEnter={handleCategoriesMouseOver}>
+                                        <a className="navATag" onMouseLeave={handleCategoriesMouseExit}>Categories</a>
                                         <span></span>
                                     </span>
                                 </div>
