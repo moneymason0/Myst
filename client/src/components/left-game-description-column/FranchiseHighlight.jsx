@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
 import "./styles/FranchiseHighlight.css";
-import "./styles/GameDescriptionArea.css";
-import "./styles/GameDescriptionArea2.css";
 
 function FranchiseHighlight() {
     const zoomImageStyle = {
