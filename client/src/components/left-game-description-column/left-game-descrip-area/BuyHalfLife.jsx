@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 import '../styles/BuyHalfLife.css'
-import '../styles/GameDescriptionArea2.css'
-import '../styles/GameDescriptionArea.css'
 
 function BuyHalfLife() {
     return (
