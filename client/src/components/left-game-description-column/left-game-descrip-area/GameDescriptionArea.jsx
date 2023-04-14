@@ -7,10 +7,10 @@ import ContentForGame from './ContentForGame';
 
 function GameDescriptionArea() {
     return (
-            <>
+            <div className='game_area_purchase'>
             <BuyHalfLife />
             <ContentForGame />
-            </>
+            </div>
             // <PurchaseBundle1 />
             // <PurchaseBundle2 />
             // <PurchaseBundle3 />

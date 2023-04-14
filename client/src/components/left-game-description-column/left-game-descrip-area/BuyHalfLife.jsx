@@ -8,11 +8,6 @@ function BuyHalfLife() {
         <div className='game_area_purchase_game_wrapper'>
             <div className='game_area_purchase_game' id='game_area_purchase_section_add_to_cart_34'>
                 <form name='add_to_cart_34' action='https://store.steampowered.com/cart/' method='POST'>
-                    <input type='hidden' name='' value='' />
-                    <input type='hidden' name='' value='' />
-                    <input type='hidden' name='' value='' />
-                    <input type='hidden' name='' value='' />
-                    <input type='hidden' name='' value='' />
                 </form>
                 <div className='game_area_purchase_platform'>
                     <span className='platform_img win'></span>

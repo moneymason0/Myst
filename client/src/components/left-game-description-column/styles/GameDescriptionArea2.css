@@ -2301,6 +2301,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 	background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
 	background: linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
 	-webkit-background-clip: text;
+    background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
@@ -4727,7 +4728,6 @@ body.v6 .store_capsule_frame > h3, body.v6 .store_capsule_frame > h3 > a {
 .mature_content_filtered.header {
 	font-size: 12px;
 	display: inline-block;
-	float: right;
 	background-color: transparent;
 	padding: 0;
 	margin: 0 15px 0 0;
@@ -4747,7 +4747,6 @@ body.v6 .store_capsule_frame > h3, body.v6 .store_capsule_frame > h3 > a {
 }
 
 .mature_content_filtered.search {
-	float: right;
 	display: inline-block;
 }
 
@@ -4834,6 +4833,7 @@ div.store_header_btn {
 
 .cluster_maincap_fill .cluster_maincap_fill_bg {
 	-webkit-filter: blur(10px);
+    filter: blur(10px);
 }
 
 .store_nav .tab img.foryou_avatar {
@@ -4928,7 +4928,6 @@ body.v6 .recommendation_section h2 span.right,
 body.v6 .recommendation_mainsection h2 span.right,
 body.v6 .user_reviews_header span.right,
 body.v6 .bucket h2 span.right{
-	float: right;
 	text-transform: none;
 	letter-spacing: normal;
 	display: inline-block;
