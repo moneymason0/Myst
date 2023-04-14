@@ -7,7 +7,7 @@ function AboutThisGame(){
     console.log(aboutGame)
     return(
         <div className="abContainer">
-            <div className="dataPanel">
+            <div className="abdataPanel">
                 <h2 className="abH2">About this game</h2>
                 {aboutGame}
             </div>

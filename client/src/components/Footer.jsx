@@ -8,7 +8,7 @@ function Footer() {
       <div id="background">
         <hr></hr>
         <div>
-          <img className="pic" src={picz}></img>
+          <img className="picz" src={picz}></img>
           <p id="rights">
             © 2023 Valve Corporation. All rights reserved. All trademarks are
             property of their respective owners in the US and other countries.

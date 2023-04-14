@@ -1,4 +1,4 @@
-div {
+#background {
     text-align: center;
 }
 
@@ -11,6 +11,7 @@ hr {
     width: 7%;
     height: auto;
     float: left;
+    
 }
 
 #rights {
