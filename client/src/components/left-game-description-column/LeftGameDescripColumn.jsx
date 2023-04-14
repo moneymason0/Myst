@@ -6,9 +6,8 @@ import AboutThisGame from './AboutThisGame';
 import FranchiseHighlight from './FranchiseHighlight';
 // import MoreFromHalfLife from './MoreFromHalfLife';
 // import MoreLikeThis from './MoreLikeThis';
-// import SystemRequirements from './SystemRequirements';
+import SystemRequirements from './SystemRequirements';
 import WhatCuratorsSay from './WhatCuratorsSay';
-import './styles/GameDescriptionArea2.css'
 
 function LeftGameDescripColumn() {
     return (
@@ -19,9 +18,10 @@ function LeftGameDescripColumn() {
             </div>
             <WhatCuratorsSay />
             <AboutThisGame />
+            <SystemRequirements />
             {/* <ContentForThisGame />
                     
-                    <SystemRequirements />
+                    
                     <CommunityMods />
                     <MoreFromHalfLife />
                 <MoreLikeThis /> */}
