@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import '/src/styles/WhatCuratorsSay.css'
+import "/src/styles/WhatCuratorsSay.css";
 
 function Curator() {
   return (
@@ -10,7 +10,7 @@ function Curator() {
             View All
           </a>
         </div>
-        <h2 className="what-curators-say">What curators say</h2>
+        <h2 className="what-curators-say">What Curators say</h2>
         <div className="curator-review">
           1,599 Curators have reviewed this product. Click
           <a href=""> here </a>
