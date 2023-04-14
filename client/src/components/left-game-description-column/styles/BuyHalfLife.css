@@ -1,7 +1,7 @@
   
   .game_area_purchase_platform {
-    display: flex;
-    justify-content: right;
+    display: block;
+    justify-content: space-between;
     margin-bottom: 20px;
   }
   
@@ -14,15 +14,15 @@
   }
   
   .win {
-    background-image: url('path/to/windows-icon.png');
+    background-image: url('https://store.cloudflare.steamstatic.com/public/images/v6/icon_platform_win.png?v=3');
   }
   
   .mac {
-    background-image: url('path/to/mac-icon.png');
+    background-image: url('https://store.cloudflare.steamstatic.com/public/images/v6/icon_platform_mac.png');
   }
   
   .linux {
-    background-image: url('path/to/linux-icon.png');
+    background-image: url('https://store.cloudflare.steamstatic.com/public/images/v6/icon_platform_linux.png');
   }
   
   .game_purchase_action_bg {
