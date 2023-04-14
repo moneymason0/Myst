@@ -8,6 +8,7 @@ import FranchiseHighlight from './FranchiseHighlight';
 // import MoreLikeThis from './MoreLikeThis';
 import SystemRequirements from './SystemRequirements';
 import WhatCuratorsSay from './WhatCuratorsSay';
+import './styles/LeftGameDescripColumn.css'
 
 function LeftGameDescripColumn() {
     return (
