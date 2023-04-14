@@ -8,8 +8,11 @@ function AboutThisGame(){
     return(
         <div className="abContainer">
             <div className="abdataPanel">
-                <h2 className="abH2">About this game</h2>
+                <h2 className="abH2">About this game
+                    <div className="abTopBar"></div>
+                </h2>
                 {aboutGame}
+                
             </div>
         </div>
     )
