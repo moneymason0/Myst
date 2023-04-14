@@ -8,18 +8,16 @@ import FranchiseHighlight from './FranchiseHighlight';
 // import MoreLikeThis from './MoreLikeThis';
 import SystemRequirements from './SystemRequirements';
 import WhatCuratorsSay from './WhatCuratorsSay';
-import './styles/GameDescriptionArea.css'
+import './styles/GameDescriptionArea2.css'
 
 function LeftGameDescripColumn() {
     return (
-        <div>
+        <div className='leftcol game_description_column'>
             <FranchiseHighlight />
-            <div className='game_area_purchase_game_wrapper'>
-                <div className='game_area_purchase_game'>
-                    <GameDescriptionArea />
-                    <WhatCuratorsSay />
-                </div>
+            <div className='game_area_purchase'>
+                <GameDescriptionArea />
             </div>
+            <WhatCuratorsSay />
             <AboutThisGame />
             <SystemRequirements />
             {/* <ContentForThisGame />
