@@ -6,17 +6,20 @@ import 'slick-carousel/slick/slick-theme.css'
 import { ModalProvider } from './context/ModalContext'
 import { GameLanguagesContextProvider } from './context/GameLanguagesContext'
 import { GameDataContextProvider } from './context/GameDataContext'
+import { BundleProvider } from './context/BundleContext'
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <GameDataContextProvider>
-      <GameLanguagesContextProvider>
-        <ModalProvider>
-          <App />
-        </ModalProvider> 
-      </GameLanguagesContextProvider>
-    </GameDataContextProvider>
+    <BundleProvider>
+      <GameDataContextProvider>
+        <GameLanguagesContextProvider>
+          <ModalProvider>
+            <App />
+          </ModalProvider>
+        </GameLanguagesContextProvider>
+      </GameDataContextProvider>
+    </BundleProvider>
   </React.StrictMode>,
 )

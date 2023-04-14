@@ -1,4 +1,4 @@
-* {
+/* * {
 	padding: 0;
 	margin: 0;
 }
@@ -139,9 +139,9 @@ body.v6.movescrolltocontent #footer {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
-		        font-size: 13px;
+		        /* font-size: 13px;
         color: #61686D;
-    }
+    } */
     body.v6 #footer .valve_links a {
        color: #C6D4DF;
     }
@@ -301,7 +301,7 @@ body.v6 .page_content {
     padding-bottom: 100px;
     margin-bottom: -78px;
 	overflow: hidden;
-}
+} */
 
 .discovery_queue_content_ctn {
 	overflow: hidden;

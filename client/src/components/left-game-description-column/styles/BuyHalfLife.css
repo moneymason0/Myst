@@ -1,10 +1,5 @@
   
-  .game_area_purchase_platform {
-    display: block;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
+ 
   .platform_img {
     background-repeat: no-repeat;
     background-size: contain;
@@ -25,13 +20,13 @@
     background-image: url('https://store.cloudflare.steamstatic.com/public/images/v6/icon_platform_linux.png');
   }
   
-  .game_purchase_action_bg {
-    display: block;
-    justify-content: right;
+  /* .game_purchase_action_bg {
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
     max-width: 40px;
     margin-left: 450px;
-  }
+  } */
   
   .btn_green_steamui {
     background-color: #66c05d;
