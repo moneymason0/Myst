@@ -15,7 +15,7 @@ import TagModal from "./components/TagModal";
 import NavBarBM from './components/NavBarBM';
 import YourStoreModal from './components/YourStoreModal';
 import NewAndNoteWorthy from './components/NewAndNoteworthy';
-import Categories from './components/categories';
+import Categories from './components/Categories'
 
 const images = [
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002348.600x338.jpg?t=1666824272',
