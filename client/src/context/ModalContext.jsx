@@ -10,6 +10,7 @@ export const ModalProvider = ({children}) => {
     const [showCat, setShowCat] = useState(false);
     const [showYourStore, setShowYourStore] = useState(false);
     const [showNewAndNoteWorthy, setShowNewAndNoteWorthy] = useState(false)
+    const [showCategories,setShowCategories] = useState(false)
 
     const handleShareClick = () => {
         setShowShareModal(true);
@@ -57,6 +58,18 @@ export const ModalProvider = ({children}) => {
         setShowNewAndNoteWorthy(false)
     }
 
+    const handleCategoriesMouseExit = () => {
+        setShowCategories(false)
+    }
+
+    
+    const handleCategoriesMouseOver = () => {
+        setShowCategories(true)
+    }
+
+
+
+
     return( <ModalContext.Provider value={{
         showShareModal,
         showEmbedModal,
@@ -78,9 +91,12 @@ export const ModalProvider = ({children}) => {
         showYourStore,
         showNewAndNoteWorthy,
         handleNewAndNoteWorthyMouseOver,
-        handleNewAndNoteWorthyMouseExit
-
-    }}>
+        handleNewAndNoteWorthyMouseExit,
+        showCategories,
+        handleCategoriesMouseOver,
+        handleCategoriesMouseExit
+    
+}}>
         {children}
     </ModalContext.Provider>
     )

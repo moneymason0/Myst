@@ -1,12 +1,15 @@
 import React, {useContext} from "react";
 import "../styles/NavBarBM.css";
 import ModalContext from "../context/ModalContext";
+import { Modal } from "react-bootstrap";
 
 
 
 function NavBarBM (){
     const {handleYourStoreMouseOver} = useContext(ModalContext);
     const {handleNewAndNoteWorthyMouseOver} = useContext(ModalContext)
+    const {handleCategoriesMouseOver} = useContext(ModalContext)
+
     return(
         <div className="headerContainer">
             <div className="headerSubContainer">
@@ -30,7 +33,7 @@ function NavBarBM (){
                                     </span>
                                 </div>
                                 <div className="tab">
-                                    <span className="navSpan">
+                                    <span className="navSpan" onMouseEnter={handleCategoriesMouseOver}>
                                         <a className="navATag">Categories</a>
                                         <span></span>
                                     </span>
