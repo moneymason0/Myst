@@ -1,10 +1,17 @@
-div {
+#background {
     text-align: center;
 }
 
 hr {
     border-width: .15px;
     padding-inline-end: 10px;
+}
+
+.picz {
+    width: 7%;
+    height: auto;
+    float: left;
+    
 }
 
 #rights {

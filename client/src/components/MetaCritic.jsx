@@ -6,7 +6,7 @@ function MetaCritic(){
         <div className="mcContainer">
             <div className="scoreArea">
                 <div className="score">96</div>
-                <div className="logo"></div>
+                <div className="critic"></div>
             </div>
             <div className="words">
                 <div className="metaCritic">metacritic</div>
