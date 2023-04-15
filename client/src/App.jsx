@@ -58,7 +58,7 @@ function App() {
             <GameMetaData />
             <LeftGameDescripColumn />
           </div>
-          <GameReviews />
+          
           {showShareModal && <ShareModal />}
           {showEmbedModal && <EmbedModal />}
           {showReportModal && <ReportModal />}
@@ -68,6 +68,7 @@ function App() {
           {showCategories && <Categories/>}
         </div>
         <div>
+          <GameReviews />
           <Footer />
         </div>
       </div>
