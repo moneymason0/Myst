@@ -38,6 +38,7 @@
     padding: 10px;
     background: none;
         min-height: 38px;
+        border-right: none;
 
 }
 .sumSection{
@@ -51,6 +52,7 @@
     width: 335px;
     display: inline-block;
     border: 1px solid #000000;
+    background-color: #40647E;
 
 }
 
