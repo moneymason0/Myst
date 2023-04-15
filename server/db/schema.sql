@@ -58,10 +58,10 @@ CREATE TABLE users (
 
 CREATE TABLE reviews(
     reviews_id SERIAL PRIMARY KEY,
-    user_id INTEGER NOT NULL REFERENCES users(user_id),
+    user_id INTEGER NOT NULL REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE,
     recommended BOOLEAN NOT NULL,
     review VARCHAR(500) NOT NULL,
-    game_id INTEGER NOT NULL REFERENCES game(game_id),
+    game_id INTEGER NOT NULL REFERENCES game(game_id) ON DELETE CASCADE ON UPDATE CASCADE,
     helpfulCount INTEGER NOT NULL,
     nonHelpfulCount INTEGER NOT NULL,
     funnyCount INTEGER NOT NULL,
