@@ -1,7 +1,9 @@
 import React from "react";
 import "/src/components/gameReviews/styles/ReviewNavBar.css"
+import { UseReviewData } from "../../hooks/UseReviewData";
 
 function ReviewNavBar(){
+    const data = UseReviewData();
     return(
         <div className="navContainer">
             <div className="reviewFilter">
@@ -35,8 +37,8 @@ function ReviewNavBar(){
 
             </div>                
             <div className="showGraphContainer">
-                <span className="showGraphBtn">
-                    <span className="showGraphBtnText">Show graph</span>
+                <span className="showGraphBtn" onClick={console.log(data)}>
+                    <span className="showGraphBtnText" >Show graph</span>
                     <div className="showGraphIcon"></div>
                 </span>
             </div>
