@@ -16,6 +16,7 @@ import NavBarBM from './components/NavBarBM';
 import YourStoreModal from './components/YourStoreModal';
 import NewAndNoteWorthy from './components/NewAndNoteworthy';
 import Categories from './components/Categories'
+import GameReviews from './components/gameReviews/GameReviews';
 
 const images = [
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002348.600x338.jpg?t=1666824272',
@@ -57,6 +58,7 @@ function App() {
             <GameMetaData />
             <LeftGameDescripColumn />
           </div>
+          
           {showShareModal && <ShareModal />}
           {showEmbedModal && <EmbedModal />}
           {showReportModal && <ReportModal />}
@@ -66,6 +68,7 @@ function App() {
           {showCategories && <Categories/>}
         </div>
         <div>
+          <GameReviews />
           <Footer />
         </div>
       </div>
