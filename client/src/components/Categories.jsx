@@ -5,6 +5,10 @@ import ModalContext from "../context/ModalContext";
 
 
 function Categories() {
+  const {handleCatgeoriesMouseOver} = useContext(ModalContext)
+  const {handleCatgeoriesMouseExit} = useContext(ModalContext)
+
+  
   return (
     <div className="popUpContainerCategories">
       <div className="category-group">    SPECIAL SECTIONS

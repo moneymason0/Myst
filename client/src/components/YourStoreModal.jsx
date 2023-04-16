@@ -1,11 +1,13 @@
 import React, {useContext} from "react";
 import ModalContext from "../context/ModalContext";
 import "../styles/YourStoreModal.css";
+import { Modal } from "react-bootstrap";
 
 
 function YourStoreModal() {
     const yourStore= ['Home','Community Reccomendations','Recently Viewed','Steam Curators']
     const {handleYourStoreMouseExit} = useContext(ModalContext);
+    const {handleYourStoreMouseOver} =useContext(ModalContext) 
     
     return(
         <div className="popUpContainerStore" onMouseLeave={handleYourStoreMouseExit}>
