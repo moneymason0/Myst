@@ -1,0 +1,131 @@
+.game_bundle_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  width: 600px;
+  margin-top: 30px;
+}
+
+.game_bundle {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  height: 113px;
+  position: relative;
+  background-image: linear-gradient(to right, #6b7c93 0%, #253746 100%);
+}
+
+.games_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.first_game_inside_bundle {
+    background-image: url('https://cdn.cloudflare.steamstatic.com/steam/subs/7/capsule_sm_120.jpg?t=1447444801');
+}
+
+.game_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.game_bundle_area_purchase_platform {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 13px;
+}
+
+.platform_img {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  margin: 0 2px;
+}
+
+.win {
+  background-image: url("https://store.cloudflare.steamstatic.com/public/images/v6/icon_platform_win.png?v=3");
+}
+
+.mac {
+  background-image: url("https://store.cloudflare.steamstatic.com/public/images/v6/icon_platform_mac.png");
+}
+
+.linux {
+  background-image: url("https://store.cloudflare.steamstatic.com/public/images/v6/icon_platform_linux.png");
+}
+
+.bundle1_h1 {
+  font-size: 22px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  text-align: left;
+  margin-left: -150px;
+}
+
+.bundle_label {
+  margin-left: 3px;
+  font-size: 20px;
+}
+
+.bundle_label_tooltip {
+  margin-left: 3px;
+}
+
+.bundle_purchase_action_bg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right: 35px; /* Update right positioning (80px to the left) */
+  bottom: -15px; /* Update bottom positioning (10px down) */
+  height: 32px;
+  background-color: #000000;
+  padding: 2px 2px 2px 0px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-right: 5px;
+  margin-bottom: 0px;
+  padding-left: 10px;
+}
+
+.add_to_cart {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.btn_green_steamui {
+  background-color: darkgreen;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 2px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.btn_green_steamui:hover {
+  background-color: #6bc566;
+}

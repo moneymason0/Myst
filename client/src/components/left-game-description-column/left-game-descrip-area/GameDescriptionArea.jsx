@@ -9,8 +9,8 @@ function GameDescriptionArea() {
     return (
             <div className='game_area_purchase' id='game_area_purchase'>
             <BuyHalfLife />
-            <ContentForGame />
             <PurchaseBundle1 />
+            <ContentForGame />
             </div>
             // <PurchaseBundle2 />
             // <PurchaseBundle3 />
