@@ -13,6 +13,7 @@ function ContentForGame() {
                 </span>
             </h2>
             <div className='game_area_dlc_list'>
+            <div className='gradient_line'></div>
                 <form className='add_all_dlc_to_cart'>
                     <input type="hidden" />
                     <input type="hidden" />
