@@ -33,11 +33,11 @@
   }
   
   .win {
-    background-image: url("https://store.cloudflare.steamstatic.com/public/images/v6/icon_platform_win.png?v=3");
+    background-image: url("https://cdn3.iconfinder.com/data/icons/social-media-2068/64/_Steam-512.png");
   }
   
   .mac {
-    background-image: url("https://store.cloudflare.steamstatic.com/public/images/v6/icon_platform_mac.png");
+    background-image: url("https://www.macworld.co.uk/cmsdata/features/3635104/Steam_logo.jpg");
   }
   
   .bundle1_h1 {
@@ -70,44 +70,41 @@
   .bundle_contents_preview {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     height: 56px;
-    overflow-x: scroll;
-    overflow-y: hidden;
     white-space: nowrap;
   }
   
   .bundle_contents_preview a {
-    margin-right: 0;
+    margin-right: 8px;
     width: 100px;
     height: 56px;
   }
   
   .first_game_inside_bundle {
-    background-image: url('https://steamcdn-a.akamaihd.net/steam/apps/753640/header.jpg?t=1619793522');
+    background-image: url('https://steamcdn-a.akamaihd.net/steam/apps/220/header.jpg?t=1578677682');
     background-size: cover;
     width: 100px;
     height: 56px;
   }
   
   .second_game_inside_bundle {
-    background-image: url('https://steamcdn-a.akamaihd.net/steam/apps/57300/header.jpg?t=1609351742');
+    background-image: url('https://steamcdn-a.akamaihd.net/steam/apps/240/header.jpg?t=1578677678');
     background-size: cover;
     width: 100px;
     height: 56px;
   }
   
   .third_game_inside_bundle {
-    background-image: url('https://steamcdn-a.akamaihd.net/steam/apps/431960/header.jpg?t=1620662607');
+    background-image: url('https://steamcdn-a.akamaihd.net/steam/apps/280/header.jpg?t=1567598769');
     background-size: cover;
     width: 100px;
     height: 56px;
   }
   
   .fourth_game_inside_bundle {
-    background-image: url('https://steamcdn-a.akamaihd.net/steam/apps/200260/header.jpg?t=1621096175');
+    background-image: url('https://steamcdn-a.akamaihd.net/steam/apps/400/header.jpg?t=1578677659');
     background-size: cover;
     width: 100px;
     height: 56px;
   }
-  
