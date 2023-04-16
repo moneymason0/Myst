@@ -5,8 +5,6 @@ import { UseReviewData } from "../../hooks/UseReviewData";
 function ReviewNavBar(){
     const { reviewsArray, numOfReviews, decendingTimeReviews, acendingTimeReviews } = UseReviewData();
 
-
-
     return(
         <div className="navContainer">
             <div className="reviewFilter">
