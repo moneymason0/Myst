@@ -1,5 +1,6 @@
 .curator-box {
-    margin: 50px 0 30px 0;}
+    margin: 50px 0px 50px 0px;
+}
 
 
 .game_description_column-view-all {
@@ -14,7 +15,12 @@
     margin-right: 3px;
 }
 
-.what-curators-say {
+.game_description_column-view-all:hover {
+    background-color: #0b7dbf;
+    color: white;
+}
+
+.wcs-heading {
     float: left;
     font-family: "Motiva Sans", Sans-serif;
     font-weight: 300;
@@ -25,12 +31,27 @@
     letter-spacing: 0.03em;
     font-weight: normal;
     padding-top: 2px;
+    
+}
+
+.wcsBar {
+    width: 380%;
+    margin: 4px;
+    height: 1px;
+    background: linear-gradient(to right, #3A6E8B, #ffffff00);
+}
+
+.wcsHere {
+    color:#ffffff;
+}
+
+.wcsHere:hover {
+    color: #0b7dbf;
 }
 
 .curator-review {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: #acb2b8;
-    padding: 20px;
-    background: rgba( 0, 0, 0, 0.2);
+    padding: 40px 0px 0px 15px;
 }

@@ -1,21 +1,20 @@
 import React from "react";
-import picz from "/src/assets/valve.png";
+import '../styles/Footer.css'
 
 function Footer() {
   return (
     <>
-      <div id="background">
-        <hr></hr>
+      <div className="footer-background">
+        <hr className="footer-hr"></hr>
         <div>
-          <img className="picz" src={picz}></img>
-          <p id="rights">
+          <p className="footer-rights">
             © 2023 Valve Corporation. All rights reserved. All trademarks are
             property of their respective owners in the US and other countries.
           </p>
         </div>
         <div>
           <div>
-            <p className="VAT">
+            <p className="footer-VAT">
               {" "}
               VAT included in all prices where applicable.
               <a href="" id="privacy">
@@ -53,7 +52,7 @@ function Footer() {
           <> | </>
           <a href="">Steamworks</a>
           <> | </>
-          <a href="">Steam distribution</a>
+          <a href="">Steam Distribution</a>
           <> | </>
           <a href="">Support</a>
           <> | </>
