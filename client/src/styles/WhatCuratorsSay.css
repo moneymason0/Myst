@@ -1,5 +1,5 @@
 .curator-box {
-    margin: 50px 0px 50px 0px;
+    margin: 30px 0px 30px 0px;
 }
 
 
@@ -21,7 +21,6 @@
 }
 
 .wcs-heading {
-    float: left;
     font-family: "Motiva Sans", Sans-serif;
     font-weight: 300;
     font-size: 14px;
@@ -35,8 +34,8 @@
 }
 
 .wcsBar {
-    width: 380%;
-    margin: 4px;
+    width: 100%;
+    margin: 5px 0px 0px 0px;
     height: 1px;
     background: linear-gradient(to right, #3A6E8B, #ffffff00);
 }
@@ -53,5 +52,8 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: #acb2b8;
-    padding: 40px 0px 0px 15px;
+    padding: 30px 0px 30px 15px;
+    margin: 0px 0px 0px 0px;
+    background: rgba( 0, 0, 0, 0.2 );    
+    height: fit-content;
 }
