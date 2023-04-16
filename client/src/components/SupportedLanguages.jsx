@@ -14,8 +14,8 @@ function SupportedLanguages(){
                 <div className="lOptions">
                     <table className="laTable">
                     <tbody>
-                        <tr classname="topContainer">
-                            <th classname="thLeftBox"></th>
+                        <tr className="topContainer">
+                            <th className="thLeftBox"></th>
                             <th className="thInterface">Interface</th>
                             <th className="thAudio">FullAudio</th>
                             <th className="thSubtitles">Subtitles</th>  

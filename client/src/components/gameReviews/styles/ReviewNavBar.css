@@ -113,3 +113,115 @@
 div {
     display: block;
 }
+.flyOutOpen{
+    display: block;
+    background-color: #c6d4df;
+    position: absolute;
+    padding: 10px;
+    color: #556772;
+    line-height: 20px;
+    z-index: 10;
+}
+.flyOut{
+    display: none;
+    background-color: #c6d4df;
+    position: absolute;
+    padding: 10px;
+    color: #556772;
+    line-height: 20px;
+    z-index: 10;
+}
+.flyContainer{
+    position: relative;
+    white-space: nowrap;
+    color: #556772;
+    line-height: 20px;
+    vertical-align: middle;
+}
+.flyInput{
+    vertical-align: middle;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    white-space: nowrap;
+}
+.flyLabel{
+    cursor: default;
+    color: #556772;
+    line-height: 20px;
+    padding-left: 10px;
+}
+.flySpan{
+    color: #7193a6;
+    font-size: 12px;
+    padding-left: 10px;
+}
+.reviewFilterOpen{
+    border-left: 1px solid #2a475e;
+    position: relative;
+    float: left;
+    padding-right: 10px;
+    background-color: #c6d4df;;
+}
+.flyOutOpen2 {
+    display: block;
+    background-color: #c6d4df;
+    position: absolute;
+    padding: 10px;
+    color: #556772;
+    line-height: 20px;
+    z-index: 10;
+    margin-left: 110px;
+}
+
+.flyOut2 {
+    display: none;
+    background-color: #c6d4df;
+    position: absolute;
+    padding: 10px;
+    color: #556772;
+    line-height: 20px;
+    z-index: 10;
+}
+.flyOutOpen3 {
+    display: block;
+    background-color: #c6d4df;
+    position: absolute;
+    padding: 10px;
+    color: #556772;
+    line-height: 20px;
+    z-index: 10;
+    margin-left: 235px;
+}
+
+.flyOut3 {
+    display: none;
+    background-color: #c6d4df;
+    position: absolute;
+    padding: 10px;
+    color: #556772;
+    line-height: 20px;
+    z-index: 10;
+}
+.flyRD{
+    color: #556772;
+    line-height: 20px;
+}
+.flyAtag{
+    text-transform: uppercase;
+    color: #67c1f5;
+    font-size: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 3px 5px;
+    border-radius: 2px;
+}

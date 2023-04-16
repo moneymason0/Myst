@@ -19,17 +19,18 @@ const seedUsers = async () => {
             name: faker.internet.userName(),
             gamesOwned: faker.datatype.number(),
             reviewCount: faker.datatype.number(),
+            image: faker.image.image(500, 500, true)
         });
     }
     try {
         await pool.query('TRUNCATE TABLE users CASCADE');
         await pool.query('ALTER SEQUENCE users_user_id_seq RESTART WITH 1');
         const queryString =
-            'INSERT INTO users (name, gamesOwned, reviewCount) VALUES ($1, $2, $3) RETURNING *';
+            'INSERT INTO users (name, gamesOwned, reviewCount, image) VALUES ($1, $2, $3, $4) RETURNING *';
         for (let i = 0; i < SEED_USERS_COUNT; i++) {
             console.log(`seeded ${i} users!`)
-            const { name, gamesOwned, reviewCount } = users[i];
-            await pool.query(queryString, [name, gamesOwned, reviewCount]);
+            const { name, gamesOwned, reviewCount, image } = users[i];
+            await pool.query(queryString, [name, gamesOwned, reviewCount, image]);
         }
         console.log('Users seeded successfully!');
     } catch (error) {

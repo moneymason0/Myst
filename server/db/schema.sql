@@ -53,7 +53,8 @@ CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
     gamesOwned INTEGER NOT NULL,
     name VARCHAR(50) NOT NULL,
-    reviewCount INTEGER NOT NULL
+    reviewCount INTEGER NOT NULL,
+    image VARCHAR(150) NOT NULL
 );
 
 CREATE TABLE reviews(
