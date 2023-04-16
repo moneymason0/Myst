@@ -15,10 +15,11 @@ function PurchaseBundle1() {
                 <span className='bundle1_platform_img mac'></span>
             </div>
             <h1 className='bundle1_h1'>Buy Valve Complete Pack
-            <span className='bundle_label' tooltip-text="Bundles are a special discount on a set of products.  If you already own some of the products contained in the bundle, purchasing the bundle will allow you to 'complete the set', paying only for the products you don't already own while still receiving the full bundle discount on each of those products.">BUNDLE</span>
-            <span className='bundle_label_tooltip' >(?)</span>
+                <span className='bundle_label' tooltip-text="Bundles are a special discount on a set of products.  If you already own some of the products contained in the bundle, purchasing the bundle will allow you to 'complete the set', paying only for the products you don't already own while still receiving the full bundle discount on each of those products.">BUNDLE</span>
+                <span className='bundle_label_tooltip' >(?)</span>
             </h1>
-            <p>
+            <p className='package_contents'>
+                <div>Buy this bundle to save 55% off all 22 items!</div>
                 <div className='bundle_contents_preview collapsed'>
                     <div className='bundle_contents_preview_position'>
                         <a>
@@ -51,13 +52,31 @@ function PurchaseBundle1() {
                     </div>
                 </div>
             </p>
-            <div className="bundle1_purchase_action_bg">
-                <div className="bundle1_price">$65.70</div>
-                <div className="bundle1_add_to_cart">
-                    <button type="bundle1_submit" className="bundle1_btn_green_steamui">Add to Cart</button>
+            <div className='game_purchase_action'>
+                <div className="game_purchase_action_bg">
+                    <div className='btn_addtocart btn_package info'>
+                        <a className='btn_blue_steamui btn_package info'>
+                            <span>Bundle Info</span>
+                        </a>
+                    </div>
+                </div>
+                <div className='game_purchase_action_bg'>
+                    <div className='discount_block game_purchase_discount no_discount'>
+                        <div className='bundle_base_discount'>-55%</div>
+                        <div className='discount_prices'>
+                            <div className='discount_final_price your_price'>
+                                <div className='your_price_label'>Your Price:</div>
+                                <div>$65.70</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='btn_addtocart'>
+                        <a className='btn_green_steamui btn_medium'>
+                            <span>Add to Cart</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-
         </div>
     );
 }
