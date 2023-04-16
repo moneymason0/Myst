@@ -66,10 +66,12 @@ function App() {
           {showYourStore && <YourStoreModal />}
           {showNewAndNoteWorthy && <NewAndNoteWorthy />}
           {showCategories && <Categories/>}
+         
         </div>
+        <GameReviews /> 
         <div>
-          <GameReviews />
           <Footer />
+          
         </div>
       </div>
     </div>

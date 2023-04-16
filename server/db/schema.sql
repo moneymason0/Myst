@@ -69,7 +69,8 @@ CREATE TABLE reviews(
     award VARCHAR(150) NOT NULL,
     played BOOLEAN NOT NULL,
     gotItFree BOOLEAN NOT NULL,
-    created_at TIMESTAMP NOT NULL 
+    created_at TIMESTAMP NOT NULL,
+    hours_played INTEGER 
 );
 
 CREATE TABLE tags (

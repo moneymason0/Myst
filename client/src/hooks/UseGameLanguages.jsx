@@ -3,6 +3,5 @@ import GameLanguagesContext from '../context/GameLanguagesContext';
 
 export const useGameLanguages = () => {
     const { languages } = useContext(GameLanguagesContext);
-    console.log(languages)
     return languages;
 };

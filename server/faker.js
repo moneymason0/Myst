@@ -9,8 +9,8 @@ const pool = new Pool({
     port: 5432,
 });
 
-const SEED_USERS_COUNT = 100000;
-const SEED_REVIEWS_COUNT = 50000;
+const SEED_USERS_COUNT = 1000;
+const SEED_REVIEWS_COUNT = 500;
 
 const seedUsers = async () => {
     const users = [];
@@ -55,6 +55,7 @@ const seedReviews = async () => {
             played: faker.datatype.boolean(),
             gotItFree: faker.datatype.boolean(),
             createdAt: faker.date.between(startDate, endDate),
+            hoursPlayed: faker.datatype.number()
         });
     }
     try {
@@ -63,7 +64,7 @@ const seedReviews = async () => {
         await pool.query('ALTER SEQUENCE reviews_reviews_id_seq RESTART WITH 1');
         await pool.query('ALTER TABLE reviews ADD CONSTRAINT reviews_user_id_fkey FOREIGN KEY (user_id) REFERENCES users(user_id)');
         const queryString =
-            'INSERT INTO reviews (user_id, recommended, review, game_id, helpfulCount, nonHelpfulCount, funnyCount, award, played, gotItFree, created_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING *';
+            'INSERT INTO reviews (user_id, recommended, review, game_id, helpfulCount, nonHelpfulCount, funnyCount, award, played, gotItFree, created_at, hours_played) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING *';
 
         for (let i = 0; i < SEED_REVIEWS_COUNT; i++) {
             console.log(`seeded ${i} reviews!`)
@@ -79,6 +80,7 @@ const seedReviews = async () => {
                 played,
                 gotItFree,
                 createdAt,
+                hoursPlayed,
             } = reviews[i];
             await pool.query(queryString, [
                 user_id,
@@ -92,6 +94,7 @@ const seedReviews = async () => {
                 played,
                 gotItFree,
                 createdAt,
+                hoursPlayed,
             ]);
         }
         console.log('Reviews seeded successfully!');

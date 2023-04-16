@@ -5,7 +5,7 @@ import "/src/styles/Footer.css";
 function Footer() {
   return (
     <>
-      <div id="background">
+      <div id="backgroundss">
         <hr></hr>
         <div>
           <img className="picz" src={picz}></img>
