@@ -3,7 +3,9 @@ import ReviewsContext from "../context/ReviewsContext";
 
 export const UseReviewData = () => {
     const { reviews } = useContext(ReviewsContext);
+    
     const reviewsArray = Object.values(reviews); 
+    
     const numOfReviews = reviewsArray.length;
     const reviewsCopy = [...reviewsArray];
     const anotherreviewsCopy = [...reviewsArray];
