@@ -14,7 +14,7 @@ export const BundleProvider = ({ children }) => {
     }
 
     return (<BundleContext.Provider value={{
-        showGame,
+        // showBundleTooltip,
         handleMouseEnter,
         handleMouseExit,
     }}>

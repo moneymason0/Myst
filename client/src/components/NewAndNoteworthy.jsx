@@ -5,6 +5,7 @@ import ModalContext from "../context/ModalContext";
 
 function NewAndNoteWorthy() {
     const {handleNewAndNoteWorthyMouseExit} = useContext(ModalContext) 
+    const {handleNewAndNoteWorthyMouseOver} = useContext(ModalContext)
     
     return(
         <div className="popUpContainerNoteWorthy" onMouseLeave={handleNewAndNoteWorthyMouseExit}>

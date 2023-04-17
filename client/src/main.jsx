@@ -8,11 +8,13 @@ import { GameLanguagesContextProvider } from './context/GameLanguagesContext'
 import { GameDataContextProvider } from './context/GameDataContext'
 import { BundleProvider } from './context/BundleContext'
 import { SRProvider } from './context/SRContext'
+import { ReviewsContextProvider } from './context/ReviewsContext'
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <ReviewsContextProvider>
     <BundleProvider>
     <SRProvider>
     <GameDataContextProvider>
@@ -24,5 +26,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </GameDataContextProvider>
     </SRProvider>
     </BundleProvider>
+    </ReviewsContextProvider>
   </React.StrictMode>,
 )

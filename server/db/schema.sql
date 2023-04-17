@@ -53,22 +53,24 @@ CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
     gamesOwned INTEGER NOT NULL,
     name VARCHAR(50) NOT NULL,
-    reviewCount INTEGER NOT NULL
+    reviewCount INTEGER NOT NULL,
+    image VARCHAR(150) NOT NULL
 );
 
 CREATE TABLE reviews(
     reviews_id SERIAL PRIMARY KEY,
-    user_id INTEGER NOT NULL REFERENCES users(user_id),
+    user_id INTEGER NOT NULL REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE,
     recommended BOOLEAN NOT NULL,
     review VARCHAR(500) NOT NULL,
-    game_id INTEGER NOT NULL REFERENCES game(game_id),
+    game_id INTEGER NOT NULL REFERENCES game(game_id) ON DELETE CASCADE ON UPDATE CASCADE,
     helpfulCount INTEGER NOT NULL,
     nonHelpfulCount INTEGER NOT NULL,
     funnyCount INTEGER NOT NULL,
     award VARCHAR(150) NOT NULL,
     played BOOLEAN NOT NULL,
     gotItFree BOOLEAN NOT NULL,
-    date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP NOT NULL,
+    hours_played INTEGER 
 );
 
 CREATE TABLE tags (

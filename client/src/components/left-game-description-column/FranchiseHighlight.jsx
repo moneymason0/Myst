@@ -11,9 +11,9 @@ function FranchiseHighlight() {
     };
 
     const backgroundImageStyle = {
-        width: "120%",
-        height: "105%",
-        justifyContent: "center center",
+        width: "100%",
+        height: "100%",
+        justifyContent: "center",
         backgroundImage:
             "url('https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/33078398/4762deceb71043238f877995e02f33206af3ae4e.jpg')",
     };

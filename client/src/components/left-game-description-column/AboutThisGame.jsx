@@ -4,7 +4,6 @@ import "./styles/AboutThisGame.css"
 
 function AboutThisGame(){
     const aboutGame= UseGameData(13)
-    console.log(aboutGame)
     return(
         <div className="abContainer">
             <div className="abdataPanel">

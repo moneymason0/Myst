@@ -15,7 +15,8 @@ import TagModal from "./components/TagModal";
 import NavBarBM from './components/NavBarBM';
 import YourStoreModal from './components/YourStoreModal';
 import NewAndNoteWorthy from './components/NewAndNoteworthy';
-import Categories from './components/categories';
+import Categories from './components/Categories'
+import GameReviews from './components/gameReviews/GameReviews';
 
 const images = [
   'https://cdn.akamai.steamstatic.com/steam/apps/70/0000002348.600x338.jpg?t=1666824272',
@@ -44,7 +45,7 @@ function App() {
         
         <div className="app">
         
-          <div>
+          <div className="backgroundGlow">
            
             <div className="carousel-and-content">
               <ImageCarousel images={images} />
@@ -52,11 +53,22 @@ function App() {
                 <GameDescription />
               </div>
             </div>
+            <div className="signInPleaseContainer">
+              <div className="signInSubContainer">
+                <p className="signInPTag">
+                  <a className="signInATag">
+                    Sign in
+                  </a>
+                  to add this item to your wishlist, follow it, or mark it as ignored
+                </p>
+              </div>
+            </div>
           </div>
           <div className="page_content">
             <GameMetaData />
             <LeftGameDescripColumn />
           </div>
+          
           {showShareModal && <ShareModal />}
           {showEmbedModal && <EmbedModal />}
           {showReportModal && <ReportModal />}
@@ -64,9 +76,12 @@ function App() {
           {showYourStore && <YourStoreModal />}
           {showNewAndNoteWorthy && <NewAndNoteWorthy />}
           {showCategories && <Categories/>}
+         
         </div>
+        <GameReviews /> 
         <div>
           <Footer />
+          
         </div>
       </div>
     </div>

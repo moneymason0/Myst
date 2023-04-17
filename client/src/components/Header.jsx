@@ -128,7 +128,7 @@ function Header() {
   return (
     <div id="global_header">
       <div className="content">
-        <div class="logo">
+        <div className="logo">
           <div id="logo">
             <img className="logos"
               src="https://cdn.discordapp.com/attachments/1093286027059282142/1095097436701200546/MYST-gray-brown-logo-small.png"
