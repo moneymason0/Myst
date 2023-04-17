@@ -14,7 +14,7 @@
   width: 600px;
   height: 55px;
   position: relative;
-  background-image: linear-gradient(to right, #6b7c93 0%, #253746 100%);
+  background-image: linear-gradient(to right, #253746 0%, #6b7c93 100%);
 }
 
 .game_area_purchase_platform {
@@ -60,7 +60,7 @@
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  right: 35px; /* Update right positioning (80px to the left) */
+  right: 15px; /* Update right positioning (80px to the left) */
   bottom: -15px; /* Update bottom positioning (10px down) */
   height: 32px;
   background-color: #000000;
