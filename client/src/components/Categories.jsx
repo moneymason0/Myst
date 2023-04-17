@@ -2,64 +2,68 @@ import React, { useContext } from "react";
 import "../styles/Categories.css";
 import ModalContext from "../context/ModalContext";
 
-
-
 function Categories() {
-  const {handleCategoriesMouseOver}= useContext(ModalContext)
-  const {handleCategoriesMouseExit}= useContext(ModalContext)
+  const { handleCategoriesMouseOver } = useContext(ModalContext);
+  const { handleCategoriesMouseExit } = useContext(ModalContext);
 
   return (
-    <div className="popUpContainerCategories" onMouseEnter={handleCategoriesMouseOver} >
-      <div className="category-group">    SPECIAL SECTIONS
-        <div className="special-column">
-          <a href="#" className="special-item">
-            Free to play
-          </a>
-          <a href="#" className="special-item">
-            Demos
-          </a>
-          <a href="#" className="special-item">
-            Early Access
-          </a>
-          <a href="#" className="special-item">
-            Controller Friendly
-          </a>
-          <a href="#" className="special-item">
-            Remote Play
-          </a>
-          <a href="#" className="special-item">
-            Software
-          </a>
-          <a href="#" className="special-item">
-            Soundtracks
-          </a>
-          <a href="#" className="special-item">
-            VR Titles
-          </a>
-          <a href="#" className="special-item">
-            VR Hardware
-          </a>
-          <a href="#" className="special-item">
-            Steam Deck
-          </a>
-          <a href="#" className="special-item">
-            Great on Deck
-          </a>
-          <a href="#" className="special-item">
-            macOS
-          </a>
-          <a href="#" className="special-item">
-            SteamOS + Linux
-          </a>
-          <a href="#" className="special-item">
-            For PC Cafes
-          </a>
-        </div>
+    <div
+      className="popUpContainerCategories"
+      onMouseEnter={handleCategoriesMouseOver}
+    >
+      
+      <div className="special-column">
+      <div className="category-group"> SPECIAL SECTIONS </div>
+        <a href="#" className="special-item">
+          Free to play
+        </a>
+        <a href="#" className="special-item">
+          Demos
+        </a>
+        <a href="#" className="special-item">
+          Early Access
+        </a>
+        <a href="#" className="special-item">
+          Controller Friendly
+        </a>
+        <a href="#" className="special-item">
+          Remote Play
+        </a>
+        <a href="#" className="special-item">
+          Software
+        </a>
+        <a href="#" className="special-item">
+          Soundtracks
+        </a>
+        <a href="#" className="special-item">
+          VR Titles
+        </a>
+        <a href="#" className="special-item">
+          VR Hardware
+        </a>
+        <a href="#" className="special-item">
+          Steam Deck
+        </a>
+        <a href="#" className="special-item">
+          Great on Deck
+        </a>
+        <a href="#" className="special-item">
+          macOS
+        </a>
+        <a href="#" className="special-item">
+          SteamOS + Linux
+        </a>
+        <a href="#" className="special-item">
+          For PC Cafes
+        </a>
       </div>
 
-      <div className="category-group"> GENRES
+      
+      <div className="genre-column">
+      <div className="category-group"> GENRES </div>
         <a href="#" className="sub-genre">
-          ACTION
+          ACTION{" "}
+        </a>
         <div>
           <a href="#" className="action-item">
             Arcade & Rythym
@@ -83,7 +87,6 @@ function Categories() {
             shmup
           </a>
         </div>
-        </a>
 
         <a href="#" className="sub-genre">
           Adventure
@@ -111,7 +114,7 @@ function Categories() {
             Visual Novel
           </a>
         </div>
-      
+
         <a href="#" className="sub-genre">
           Role-Playing
         </a>
@@ -165,7 +168,6 @@ function Categories() {
             Space & Flight
           </a>
         </div>
-      </div>
 
         <a href="#" className="sub-genre">
           Strategy
@@ -194,7 +196,6 @@ function Categories() {
           </a>
         </div>
 
-
         <a href="#" className="sub-genre">
           Sports & Racing
         </a>
@@ -221,60 +222,58 @@ function Categories() {
             Team Sports
           </a>
         </div>
-
-
-      <div className="category-group">THEMES
-        <div className="theme-column">
-          <a href="#" className="theme-item">
-            Anime
-          </a>
-          <a href="#" className="theme-item">
-            Horror
-          </a>
-          <a href="#" className="theme-item">
-            Mystery & Detective
-          </a>
-          <a href="#" className="theme-item">
-            Open World
-          </a>
-          <a href="#" className="theme-item">
-            Sci-Fi & Cyberpunk
-          </a>
-          <a href="#" className="theme-item">
-            Space
-          </a>
-          <a href="#" className="theme-item">
-            Survival
-          </a>
-        </div>
       </div>
 
-      <div className="category-group">PLAYER SUPPORT
-        <div className="support-column">
-          <a href="#" className="support-item">
-            Co-Operative
-          </a>
-          <a href="#" className="support-item">
-            LAN
-          </a>
-          <a href="#" className="support-item">
-            Local & Party
-          </a>
-          <a href="#" className="support-item">
-            MMO
-          </a>
-          <a href="#" className="support-item">
-            Multiplayer
-          </a>
-          <a href="#" className="support-item">
-            Online Competitive
-          </a>
-          <a href="#" className="support-item">
-            Singleplayer
-          </a>
-          </div>
-        </div>
+      
+      <div className="support-theme-column">
+      <div className="category-group">THEMES </div>
+        <a href="#" className="theme-item">
+          Anime
+        </a>
+        <a href="#" className="theme-item">
+          Horror
+        </a>
+        <a href="#" className="theme-item">
+          Mystery & Detective
+        </a>
+        <a href="#" className="theme-item">
+          Open World
+        </a>
+        <a href="#" className="theme-item">
+          Sci-Fi & Cyberpunk
+        </a>
+        <a href="#" className="theme-item">
+          Space
+        </a>
+        <a href="#" className="theme-item">
+          Survival
+        </a>
+
+      
+      <div className="category-group">PLAYER SUPPORT </div>
+        <a href="#" className="support-item">
+          Co-Operative
+        </a>
+        <a href="#" className="support-item">
+          LAN
+        </a>
+        <a href="#" className="support-item">
+          Local & Party
+        </a>
+        <a href="#" className="support-item">
+          MMO
+        </a>
+        <a href="#" className="support-item">
+          Multiplayer
+        </a>
+        <a href="#" className="support-item">
+          Online Competitive
+        </a>
+        <a href="#" className="support-item">
+          Singleplayer
+        </a>
       </div>
+    </div>
   );
 }
 
