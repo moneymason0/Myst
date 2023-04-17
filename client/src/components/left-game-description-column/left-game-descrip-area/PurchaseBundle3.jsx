@@ -59,15 +59,11 @@ function PurchaseBundle3() {
                             <span>Bundle Info</span>
                         </a>
                     </div>
-                </div>
-                <div className='bundle_purchase_action_bg'>
+                    <div className='bundle_base_discount'>-45%</div>
                     <div className='discount_block game_purchase_discount no_discount'>
-                        <div className='bundle_base_discount'>-55%</div>
                         <div className='discount_prices'>
-                            <div className='discount_final_price your_price'>
-                                <div className='your_price_label'>Your Price:</div>
-                                <div>$65.70</div>
-                            </div>
+                            <div className='your_price_label'>Your Price:</div>
+                            <div className='discount_price'>$13.71</div>
                         </div>
                     </div>
                     <div className='btn_addtocart'>
