@@ -114,7 +114,7 @@ function ReviewNavBar(){
                         <span className="flySpan">{numOfReviews}</span>
                     </label>
                     <br></br>
-                    <input type="radio" className="flyInput" name="reviewType"></input>
+                    <input type="radio" className="flyInput" name="reviewType" checked></input>
                     <label className="flyLabel">
                         Your languages
                         <span className="flySpan">{numOfReviews}</span>
