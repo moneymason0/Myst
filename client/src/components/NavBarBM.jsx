@@ -24,7 +24,7 @@ function NavBarBM (){
                             <div className="storeNav">
                                 <div className="tab">
                                     <span className="navSpan" onMouseEnter={handleYourStoreMouseOver}>
-                                        <a className="navATag" onMouseLeave={handleYourStoreMouseExit} href="https://store.steampowered.com/">Your Store</a>
+                                        <a className="navATag"  href="https://store.steampowered.com/">Your Store</a>
                                         <span></span>
                                     </span>
                                 </div>
