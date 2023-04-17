@@ -52,6 +52,31 @@ app.get('/games/:gameId/gameInfo', async (req, res) => {
         });
 });
 
+app.get('/reviews', async (req, res) => {
+    try {
+        const client = await pool.connect();
+        const result = await client.query('SELECT * FROM reviews');
+        const reviews = result.rows;
+        res.status(200).json(reviews);
+        client.release();
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
+app.get('/reviews/users', (req, res) => {
+    const query = 'SELECT reviews.*, users.name, users.image, users.reviewCount, users.gamesOwned FROM reviews JOIN users ON reviews.user_id = users.user_id';
+    pool.query(query, (error, results) => {
+        if (error) {
+            console.log(error);
+            res.status(500).send('Internal Server Error');
+        } else {
+            res.json(results.rows);
+        }
+    });
+});
+
 
 app.listen(3000, () => {
     console.log('Server listening on port 3000')

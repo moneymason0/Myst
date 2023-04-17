@@ -1,6 +1,9 @@
 import React from "react";
 import "/src/components/gameReviews/styles/Header.css"
+import { UseReviewData } from "../../hooks/UseReviewData";
+
 function Header(){
+    const { numOfReviews } = UseReviewData();
     return(
         <>
             <h2 className="headerH2">CUSTOMER REVIEWS</h2>
@@ -15,7 +18,7 @@ function Header(){
                                 Overwhelmingly Positive
                             </span>
                             <span className="overallAmount">
-                                (70,586 reviews)
+                                ({numOfReviews})
                             </span>
                             <a className="overallToolTip">
                                 <img className="oatooltipimg" src="https://store.akamai.steamstatic.com/public/shared/images/ico/icon_questionmark.png"></img>
@@ -33,7 +36,7 @@ function Header(){
                                 Overwhelmingly Positive
                             </span>
                             <span className="overallAmount">
-                                (1686 reviews)
+                                ({numOfReviews})
                             </span>
                             <a className="overallToolTip">
                                 <img className="oatooltipimg" src="https://store.akamai.steamstatic.com/public/shared/images/ico/icon_questionmark.png"></img>

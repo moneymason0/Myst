@@ -45,12 +45,22 @@ function App() {
         
         <div className="app">
         
-          <div>
+          <div className="backgroundGlow">
            
             <div className="carousel-and-content">
               <ImageCarousel images={images} />
               <div className="game-description-wrapper">
                 <GameDescription />
+              </div>
+            </div>
+            <div className="signInPleaseContainer">
+              <div className="signInSubContainer">
+                <p className="signInPTag">
+                  <a className="signInATag">
+                    Sign in
+                  </a>
+                  to add this item to your wishlist, follow it, or mark it as ignored
+                </p>
               </div>
             </div>
           </div>
@@ -66,10 +76,12 @@ function App() {
           {showYourStore && <YourStoreModal />}
           {showNewAndNoteWorthy && <NewAndNoteWorthy />}
           {showCategories && <Categories/>}
+         
         </div>
+        <GameReviews /> 
         <div>
-          <GameReviews />
           <Footer />
+          
         </div>
       </div>
     </div>

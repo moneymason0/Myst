@@ -44,7 +44,7 @@
   background-image: url("https://store.cloudflare.steamstatic.com/public/images/v6/icon_platform_linux.png");
 }
 
-h1 {
+.buy_half_life_h1 {
     font-size: 22px;
     margin: 0;
     position: relative;
