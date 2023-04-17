@@ -19,55 +19,51 @@ function PurchaseBundle2() {
                 <span className='bundle_label_tooltip' >(?)</span>
             </h1>
             <p className='package_contents'>
-                <div>Buy this bundle to save 40% off all 8 items!</div>
+                <div className='bundle_deal'>Buy this bundle to save 40% off all 8 items!</div>
                 <div className='bundle_contents_preview collapsed'>
                     <div className='bundle_contents_preview_position'>
                         <a>
-                            <img className='first_game_inside_bundle' />
+                            <img className='first_game_inside_bundle2' />
                         </a>
                         <a>
-                            <img className='second_game_inside_bundle' />
+                            <img className='second_game_inside_bundle2' />
                         </a>
                         <a>
-                            <img className='third_game_inside_bundle' />
+                            <img className='third_game_inside_bundle2' />
                         </a>
                         <a>
-                            <img className='fourth_game_inside_bundle' />
+                            <img className='fourth_game_inside_bundle2' />
                         </a>
                         <a>
-                            <img className='fifth_game_inside_bundle' />
+                            <img className='fifth_game_inside_bundle2' />
                         </a>
                         <a>
-                            <img className='sixth_game_inside_bundle' />
+                            <img className='sixth_game_inside_bundle2' />
                         </a>
                         <a>
-                            <img className='seventh_game_inside_bundle' />
+                            <img className='seventh_game_inside_bundle2' />
                         </a>
                         <a>
-                            <img className='eighth_game_inside_bundle' />
+                            <img className='eighth_game_inside_bundle2' />
                         </a>
                         <a>
-                            <img className='first_game_inside_bundle' />
+                            <img className='ninth_game_inside_bundle2' />
                         </a>
                     </div>
                 </div>
             </p>
             <div className='game_purchase_action'>
-                <div className="game_purchase_action_bg">
+                <div className="bundle_purchase_action_bg">
                     <div className='btn_addtocart btn_package info'>
                         <a className='btn_blue_steamui btn_package info'>
                             <span>Bundle Info</span>
                         </a>
                     </div>
-                </div>
-                <div className='game_purchase_action_bg'>
+                    <div className='bundle_base_discount'>-40%</div>
                     <div className='discount_block game_purchase_discount no_discount'>
-                        <div className='bundle_base_discount'>-55%</div>
                         <div className='discount_prices'>
-                            <div className='discount_final_price your_price'>
-                                <div className='your_price_label'>Your Price:</div>
-                                <div>$65.70</div>
-                            </div>
+                            <div className='your_price_label'>Your Price:</div>
+                            <div className='discount_price'>$36.52</div>
                         </div>
                     </div>
                     <div className='btn_addtocart'>
