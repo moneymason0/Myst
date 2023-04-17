@@ -5,10 +5,13 @@ import ModalContext from "../context/ModalContext";
 
 
 function Categories() {
+  const {handleCategoriesMouseOver}= useContext(ModalContext)
+  const {handleCategoriesMouseExit}= useContext(ModalContext)
+
   return (
-    <div className="popUpContainerCategories">
+    <div className="popUpContainerCategories" onMouseEnter={handleCategoriesMouseOver} >
       <div className="category-group">    SPECIAL SECTIONS
-        <div>
+        <div className="special-column">
           <a href="#" className="special-item">
             Free to play
           </a>
@@ -221,7 +224,7 @@ function Categories() {
 
 
       <div className="category-group">THEMES
-        <div>
+        <div className="theme-column">
           <a href="#" className="theme-item">
             Anime
           </a>
@@ -247,7 +250,7 @@ function Categories() {
       </div>
 
       <div className="category-group">PLAYER SUPPORT
-        <div>
+        <div className="support-column">
           <a href="#" className="support-item">
             Co-Operative
           </a>
