@@ -10,7 +10,7 @@ function Categories() {
   return (
     <div
       className="popUpContainerCategories"
-      onMouseEnter={handleCategoriesMouseOver}
+      onMouseEnter={handleCatgeoriesMouseOver}
     >
       
       <div className="special-column">
