@@ -13,7 +13,7 @@
     display: flex;
     background: linear-gradient(90deg, rgba(33, 162, 255, 0.1) 1.89%, rgba(0, 0, 0, 0) 50%), linear-gradient(180deg, #575860 11.6%, #3A4852 54.73%, #2C2D34 100%);
     padding: 8px 5px 8px 5px;
-    top: 21.5%;
+    top: 21%;
     box-shadow: 0  0 5px rgba(0, 0, 0, 0.2);
 }
 
