@@ -11,6 +11,7 @@ function Categories() {
     <div
       className="popUpContainerCategories"
       onMouseEnter={handleCatgeoriesMouseOver}
+      onMouseLeave={handleCatgeoriesMouseExit}
     >
       
       <div className="special-column">

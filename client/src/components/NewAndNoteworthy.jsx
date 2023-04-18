@@ -4,9 +4,8 @@ import ModalContext from "../context/ModalContext";
 
 
 function NewAndNoteWorthy() {
-    const {handleNewAndNoteWorthyMouseExit} = useContext(ModalContext) 
-    const {handleNewAndNoteWorthyMouseOver} = useContext(ModalContext)
-    
+    const {handleNewAndNoteWorthyMouseExit} = useContext(ModalContext) ;
+    const {handleNewAndNoteWorthyMouseOver} = useContext(ModalContext) ;    
     return(
         <div className="popUpContainerNoteWorthy" onMouseLeave={handleNewAndNoteWorthyMouseExit}>
             <a className="item" href="https://store.steampowered.com/login/?redir=replay%3Fsrc%3D7%26snr%3D1_5_9__12&redir_ssl=1&snr=1_5_9__12">Steam Replay 2022</a>

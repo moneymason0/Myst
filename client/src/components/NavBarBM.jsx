@@ -23,20 +23,20 @@ function NavBarBM (){
                         <div className="navBtns">
                             <div className="storeNav">
                                 <div className="tab">
-                                    <span className="navSpan" onMouseEnter={handleYourStoreMouseOver}>
-                                        <a className="navATag"  onMouse Leave={handleYourStoreMouseExit} href="https://store.steampowered.com/">Your Store</a>
+                                    <span className="navSpan" >
+                                        <a className="navATag"   href="https://store.steampowered.com/" onMouseEnter={handleYourStoreMouseOver} onMouseLeave={handleCategoriesMouseExit}>Your Store</a>
                                         <span></span>
                                     </span>
                                 </div>
                                 <div className="tab">
-                                    <span className="navSpan" onMouseEnter={handleNewAndNoteWorthyMouseOver}>
-                                        <a className="navATag" onMouseLeave={handleNewAndNoteWorthyMouseExit} >New & Noteworthy</a>
+                                    <span className="navSpan" >
+                                        <a className="navATag"  onMouseEnter={handleNewAndNoteWorthyMouseOver} onMouseLeave={handleNewAndNoteWorthyMouseExit}>New & Noteworthy</a>
                                         <span></span>
                                     </span>
                                 </div>
-                                <div className="tab">
-                                    <span className="navSpan" onMouseEnter={handleCategoriesMouseOver}>
-                                        <a className="navATag" >Categories</a>
+                                <div className="tab" >
+                                    <span className="navSpan" >
+                                        <a className="navATag" onMouseEnter={handleCategoriesMouseOver} onMouseLeave={handleCategoriesMouseExit}>Categories</a>
                                         <span></span>
                                     </span>
                                 </div>
