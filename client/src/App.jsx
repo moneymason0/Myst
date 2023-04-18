@@ -59,7 +59,7 @@ function App() {
                   <a className="signInATag">
                     Sign in
                   </a>
-                  to add this item to your wishlist, follow it, or mark it as ignored
+                  <a> to add this item to your wishlist, follow it, or mark it as ignored</a>
                 </p>
               </div>
             </div>
