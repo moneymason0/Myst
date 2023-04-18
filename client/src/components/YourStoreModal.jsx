@@ -10,7 +10,7 @@ function YourStoreModal() {
     const {handleYourStoreMouseOver} =useContext(ModalContext) 
     
     return(
-        <div className="popUpContainerStore" onMouseLeave={handleYourStoreMouseExit}>
+        <div className="popUpContainerStore" onMouseEnter={handleYourStoreMouseOver}>
             <a className="item" href="https://store.steampowered.com/">Home</a>
             <a className="item" href="https://store.steampowered.com/communityrecommendations/">Community Recomendations</a>
             <a className="item" href="https://store.steampowered.com/recommended/">Recently Viewed</a>
