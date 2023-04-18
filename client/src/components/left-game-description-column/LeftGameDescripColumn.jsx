@@ -17,15 +17,14 @@ function LeftGameDescripColumn() {
             <div className='game_area_purchase'>
                 <GameDescriptionArea />
             </div>
-            <WhatCuratorsSay />
             <AboutThisGame />
             <SystemRequirements />
-            {/* <ContentForThisGame />
-                    
-                    
-                    <CommunityMods />
-                    <MoreFromHalfLife />
-                <MoreLikeThis /> */}
+            <WhatCuratorsSay />
+
+            {/* Unfinished components */}
+            {/* <CommunityMods />
+            <MoreFromHalfLife />
+            <MoreLikeThis /> */}
         </div>
     )
 }
