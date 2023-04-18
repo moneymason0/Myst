@@ -325,3 +325,18 @@
 .btn_blue_steamui:hover {
   background-color: #3399ff;
 }
+
+.tooltip {
+    position: fixed;
+    z-index: 1000;
+    width: 175px;
+    height: 75px;
+    padding: 4px;
+    border: 1px solid black;
+    background-color: lightgray;
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    color: black;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+}

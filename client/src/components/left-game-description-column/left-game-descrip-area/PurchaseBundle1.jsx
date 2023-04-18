@@ -3,7 +3,13 @@ import BundleContext from "../../../context/BundleContext";
 import '../styles/PurchaseBundle.css'
 
 function PurchaseBundle1() {
-    const { showBundleTooltip, handleMouseEnter, handleMouseExit } = useContext(BundleContext);
+    const { showBundleTooltip, tooltipPosition, handleMouseEnter, handleMouseExit } = useContext(BundleContext);
+
+    const tooltipStyle = {
+        position: 'fixed',
+        top: tooltipPosition.y - 105,
+        left: tooltipPosition.x - 37,
+    };
 
     return (
         <div className="game_bundle_wrapper game_bundle">
@@ -15,8 +21,20 @@ function PurchaseBundle1() {
                 <span className='bundle1_platform_img mac'></span>
             </div>
             <h1 className='bundle1_h1'>Buy Valve Complete Pack
-                <span className='bundle_label' tooltip-text="Bundles are a special discount on a set of products.  If you already own some of the products contained in the bundle, purchasing the bundle will allow you to 'complete the set', paying only for the products you don't already own while still receiving the full bundle discount on each of those products.">BUNDLE</span>
-                <span className='bundle_label_tooltip' >(?)</span>
+                <span
+                    className='bundle_label'
+                    onMouseEnter={(e) => handleMouseEnter(e)}
+                    onMouseLeave={handleMouseExit}
+                    tooltip-text="Bundles are a special discount on a set of products. If you already own some of the products contained in the bundle, purchasing the bundle will allow you to 'complete the set', paying only for the products you don't already own while still receiving the full bundle discount on each of those products."
+                >
+                    BUNDLE
+                </span>
+                {showBundleTooltip && (
+                    <div className="tooltip" style={tooltipStyle}>
+                        Bundles are a special discount on a set of products. If you already own some of the products contained in the bundle, purchasing the bundle will allow you to 'complete the set', paying only for the products you don't already own while still receiving the full bundle discount on each of those products.
+                    </div>
+                )}
+                <span className='bundle_label_tooltip'>(?)</span>
             </h1>
             <p className='package_contents'>
                 <div className='bundle_deal'>Buy this bundle to save 55% off all 22 items!</div>
