@@ -1,6 +1,6 @@
 .smContainer {
     position: fixed;
-    z-index: 1000;
+    z-index: 10000;
     max-width: 1008px;
     display: block;
     color: #c6d4df;
