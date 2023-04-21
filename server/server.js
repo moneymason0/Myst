@@ -53,9 +53,10 @@ app.get('/games/:gameId/gameInfo', async (req, res) => {
 });
 
 app.get('/reviews', async (req, res) => {
+    const gameId = req.params.gameId;
     try {
         const client = await pool.connect();
-        const result = await client.query('SELECT * FROM reviews');
+        const result = await client.query('SELECT * FROM reviews WHERE game_id = $1', [ gameId ]);
         const reviews = result.rows;
         res.status(200).json(reviews);
         client.release();
