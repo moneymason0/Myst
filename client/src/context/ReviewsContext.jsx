@@ -12,7 +12,7 @@ export const ReviewsContextProvider = ({ children }) => {
     const [showGraph, setShowGraph] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:3000/reviews/users')
+        fetch('http://localhost:3000/reviews/1/users')
             .then(response => response.json())
             .then(data => setReviews(data))
             .catch(error => console.log(error));

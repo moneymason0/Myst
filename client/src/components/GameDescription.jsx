@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import pic from '/src/assets/game-description-image.png';
 import UserDefinedTags from "./UserDefinedTags";
-import "/src/styles/GameDescription.css"
+import "/src/styles/GameDescription.css";
 
 function GameDescription(){
     return(
