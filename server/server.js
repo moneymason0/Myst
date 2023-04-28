@@ -10,6 +10,10 @@ const app2 = express();
 app2.use(express.json());
 app2.use(cors());
 
+const app3 = express();
+app3.use(express.json());
+app3.use(cors());
+
 const pool = new Pool({
     user: 'postgres',
     host: '127.0.0.1',
@@ -30,7 +34,6 @@ const handler1 = num => (req,res)=>{
                 res.status(500).send('Error retrieving languages for game');
             } else {
                 const languageNames = result.rows.map(row => row.name);
-                console.log('Response from server ' + num);
                 res.json(languageNames);
             }
         }
@@ -45,7 +48,6 @@ const handler2 = num => (req,res)=>{
                 res.status(404).send('Game not found');
             } else {
                 const gameInfo = result.rows[0];
-                console.log('Response from server ' + num);
                 res.send(gameInfo);
             }
         })
@@ -64,7 +66,6 @@ const handler3 = num => (req,res)=>{
             console.log(error);
             res.status(500).send('Internal Server Error');
         } else {
-            console.log('Response from server ' + num);
             res.json(results.rows);
         }
     });
@@ -82,6 +83,12 @@ app2.get('/reviews/:id/users', handler3(2));
 
 // --------------------------------------------------------------------------------------------------------------------------------------
 
+app3.get('/games/:gameId/languages', handler1(2));
+app3.get('/games/:gameId/gameInfo', handler2(2));
+app3.get('/reviews/:id/users', handler3(2));
+
+// --------------------------------------------------------------------------------------------------------------------------------------
+
 app1.listen(3000, (err) => {
     err ?
     console.log("Failed to listen on PORT 3000"):
@@ -89,6 +96,12 @@ app1.listen(3000, (err) => {
 })
 
 app2.listen(3001, (err) => {
+    err ?
+    console.log("Failed to listen on PORT 3001"):
+    console.log("Application Server listening on PORT 3001");
+})
+
+app3.listen(3002, (err) => {
     err ?
     console.log("Failed to listen on PORT 3001"):
     console.log("Application Server listening on PORT 3001");

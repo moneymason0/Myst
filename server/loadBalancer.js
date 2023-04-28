@@ -6,6 +6,7 @@ const axios = require('axios');
 const servers = [
     "http://localhost:3000",
     "http://localhost:3001",
+    "http://localhost:3002"
 ]
  
 // Track the current application server to send request
@@ -38,11 +39,7 @@ const handler = async (req, res) =>{
         res.status(500).send("Server error!")   
     }
 }
- 
-// Serve favicon.ico image
-app.get('/favicon.ico', (req, res
-    ) => res.sendFile('/favicon.ico'));
- 
+
 // When receive new request
 // Pass it to handler method
 app.use((req,res)=>{handler(req, res)});

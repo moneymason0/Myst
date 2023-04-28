@@ -1,5 +1,5 @@
 config:
-  target: "http://localhost:3000"
+  target: "http://localhost:8000"
   phases:
     - duration: 10
       arrivalRate: 0
@@ -28,7 +28,7 @@ config:
       name: "End Stage"
  
 scenarios:
-  - name: "Stress Test"
+  - name: "Spike Test"
     flow:
       - get:
           url: "/games/1/languages"
