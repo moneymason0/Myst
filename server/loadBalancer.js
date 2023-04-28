@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path');
 const app = express();
 const axios = require('axios');
  
@@ -7,7 +6,6 @@ const axios = require('axios');
 const servers = [
     "http://localhost:3000",
     "http://localhost:3001",
-    "http://localhost:3002"
 ]
  
 // Track the current application server to send request
@@ -15,14 +13,11 @@ let current = 0;
  
 // Receive new request
 // Forward to application server
-const handler = async (req, res) =>{
- 
+const handler = async (req, res) =>{ 
     // Destructure following properties from request object
-    const { method, url, headers, body } = req;
- 
+    const { method, url, headers, body } = req; 
     // Select the current server to forward the request
-    const server = servers[current];
- 
+    const server = servers[current]; 
     // Update track to select next server
     current === (servers.length-1)? current = 0 : current++
  
@@ -53,7 +48,7 @@ app.get('/favicon.ico', (req, res
 app.use((req,res)=>{handler(req, res)});
  
 // Listen on PORT 8080
-app.listen(8080, err =>{
+app.listen(8000, err =>{
     err ?
     console.log("Failed to listen on PORT 8080"):
     console.log("Load Balancer Server "

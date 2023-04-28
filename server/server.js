@@ -2,9 +2,13 @@ const express = require('express');
 const { Pool } = require('pg');
 const cors = require('cors');
 
-const app = express();
-app.use(express.json());
-app.use(cors());
+const app1 = express();
+app1.use(express.json());
+app1.use(cors());
+
+const app2 = express();
+app2.use(express.json());
+app2.use(cors());
 
 const pool = new Pool({
     user: 'postgres',
@@ -14,7 +18,8 @@ const pool = new Pool({
     port: 5432
 });
 
-app.get('/games/:gameId/languages', (req, res) => {
+// Handler method
+const handler1 = num => (req,res)=>{
     const gameId = req.params.gameId;
     pool.query(
         'SELECT language.name FROM language INNER JOIN game_language ON language.language_id = game_language.language_id INNER JOIN game ON game.game_id = game_language.game_id WHERE game.game_id = $1',
@@ -25,18 +30,14 @@ app.get('/games/:gameId/languages', (req, res) => {
                 res.status(500).send('Error retrieving languages for game');
             } else {
                 const languageNames = result.rows.map(row => row.name);
+                console.log('Response from server ' + num);
                 res.json(languageNames);
             }
         }
     );
-});
+}
 
-app.get('/hello', () => {
-    console.log ('Hello')
-    
-});
-
-app.get('/games/:gameId/gameInfo', async (req, res) => {
+const handler2 = num => (req,res)=>{
     const gameId = req.params.gameId;
     pool.query('SELECT * FROM game WHERE game_id = $1', [gameId])
         .then(result => {
@@ -44,6 +45,7 @@ app.get('/games/:gameId/gameInfo', async (req, res) => {
                 res.status(404).send('Game not found');
             } else {
                 const gameInfo = result.rows[0];
+                console.log('Response from server ' + num);
                 res.send(gameInfo);
             }
         })
@@ -51,24 +53,9 @@ app.get('/games/:gameId/gameInfo', async (req, res) => {
             console.error(err);
             res.status(500).send('Internal server error');
         });
-});
+}
 
-app.get('/reviews', async (req, res) => {
-    const gameId = req.params.gameId;
-    try {
-        const client = await pool.connect();
-        const result = await client.query('SELECT * FROM reviews WHERE game_id = $1', [ gameId ]);
-        const reviews = result.rows;
-        res.status(200).json(reviews);
-        client.release();
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ message: 'Internal server error' });
-    }
-});
-
-app.get('/reviews/:id/users', (req, res) => {
-
+const handler3 = num => (req,res)=>{
     const gameId = req.params.id;
 
     const query = `SELECT reviews.*, users.name, users.image, users.reviewCount, users.gamesOwned FROM reviews JOIN users ON reviews.user_id = users.user_id WHERE game_id=${gameId}`;
@@ -77,12 +64,32 @@ app.get('/reviews/:id/users', (req, res) => {
             console.log(error);
             res.status(500).send('Internal Server Error');
         } else {
+            console.log('Response from server ' + num);
             res.json(results.rows);
         }
     });
-});
+}
+ 
+app1.get('/games/:gameId/languages', handler1(1));
+app1.get('/games/:gameId/gameInfo', handler2(1));
+app1.get('/reviews/:id/users', handler3(1));
 
+//------------------------------------------------------------------------------------------------------------------------------------------
 
-app.listen(3000, () => {
-    console.log('Server listening on port 3000')
+app2.get('/games/:gameId/languages', handler1(2));
+app2.get('/games/:gameId/gameInfo', handler2(2));
+app2.get('/reviews/:id/users', handler3(2));
+
+// --------------------------------------------------------------------------------------------------------------------------------------
+
+app1.listen(3000, (err) => {
+    err ?
+    console.log("Failed to listen on PORT 3000"):
+    console.log("Application Server listening on PORT 3000");
+})
+
+app2.listen(3001, (err) => {
+    err ?
+    console.log("Failed to listen on PORT 3001"):
+    console.log("Application Server listening on PORT 3001");
 })
