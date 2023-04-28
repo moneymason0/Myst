@@ -1,17 +1,14 @@
 const express = require('express');
 const { Pool } = require('pg');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
 const pool = new Pool({
     user: 'postgres',
-    host: 'db',
+    host: '127.0.0.1',
     database: 'mydb',
     password: 'password',
     port: 5432
@@ -34,6 +31,10 @@ app.get('/games/:gameId/languages', (req, res) => {
     );
 });
 
+app.get('/hello', () => {
+    console.log ('Hello')
+    
+});
 
 app.get('/games/:gameId/gameInfo', async (req, res) => {
     const gameId = req.params.gameId;

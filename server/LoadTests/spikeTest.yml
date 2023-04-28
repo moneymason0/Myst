@@ -1,0 +1,38 @@
+config:
+  target: "http://localhost:3000"
+  phases:
+    - duration: 10
+      arrivalRate: 0
+      rampTo: 100
+      name: "Warming Up - Stage 1"
+    - duration: 60
+      arrivalRate: 100
+      name: "Initial Small Load Stage"
+    - duration: 10
+      arrivalRate: 100
+      rampTo: 1400
+      name: "Ramp Up Spike"
+    - duration: 180
+      arrivalRate: 1400
+      name: "Soak at Spike"
+    - duration: 10
+      arrivalRate: 1400
+      rampTo: 100
+      name: "Ramp Down Spike"
+    - duration: 180
+      arrivalRate: 100
+      name: "Last Small Load Stage"
+    - duration: 10
+      arrivalRate: 100
+      rampTo: 0
+      name: "End Stage"
+ 
+scenarios:
+  - name: "Stress Test"
+    flow:
+      - get:
+          url: "/games/1/languages"
+      - get:
+          url: "/games/1/gameInfo"
+      - get:
+          url: "/reviews/1/users"
