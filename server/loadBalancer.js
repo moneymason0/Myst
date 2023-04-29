@@ -6,7 +6,9 @@ const axios = require('axios');
 const servers = [
     "http://localhost:3000",
     "http://localhost:3001",
-    "http://localhost:3002"
+    // "http://localhost:3002",
+    // "http://localhost:3003",
+    // "http://localhost:3004"
 ]
  
 // Track the current application server to send request
@@ -32,7 +34,7 @@ const handler = async (req, res) =>{
         });
         // Send back the response data
         // from application server to client
-        res.send(response.data)
+        res.status(200).send(response.data)
     }
     catch(err){
         // Send back the error message
